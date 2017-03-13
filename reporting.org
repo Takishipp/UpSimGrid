@@ -1,15 +1,21 @@
-* DONE Preparing Work environment [80%]
+* Introduction
+* Bibliography
+* Journal 
+** Week 1 and 2 Mar
+*** TODO Preparing Work environment [80%]
   - [X] VirtualBox works
-  - [X] Virtual Machine works
+  - [X] Virtual Machine works 
   - [ ] Coudln't resize virtual machine display correctly. 
-  - [X] Simgrid  
-  - [X] Org mod : For that, one has to clone - install org mod (see orgmode.org) 
-and install emacs (and spacemacs if one wish to). 
-* TODO Become a friend with Simgrid and its features [0%]
+  - [X] Simgrid 
+  - [X] Org mod : For that, one has to clone - install org mod (see [[orgmode.org]]) and install emacs (and spacemacs if one wish to). 
+*** TODO Become a friend with Simgrid and its features [33%]
   - [ ] Read SimGrid references.
-  - [ ] Learn how to use Simgrid
-  - [ ] Use MSG
-* TODO Dev goals [0%]
+       - [[simgrid.gforge.inria.fr/tutorials.php]]
+       - [[simgrid.gforge.inria.fr/documentation.php]]
+  - [ ] Learn how to use Simgrid.
+  - [ ] Use MSG.
+* Our intention in the further weeks
+*** TODO Dev goals [0%]
   - [ ] Add the missing java-examples to MSG directory.
   - [ ] Complete S4u interface.
   - [ ] Write a manual for S4U.
