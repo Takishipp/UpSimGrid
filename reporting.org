@@ -1,0 +1,15 @@
+* DONE Preparing Work environment [80%]
+  - [X] VirtualBox works
+  - [X] Virtual Machine works
+  - [ ] Coudln't resize virtual machine display correctly. 
+  - [X] Simgrid  
+  - [X] Org mod : For that, one has to clone - install org mod (see orgmode.org) 
+and install emacs (and spacemacs if one wish to). 
+* TODO Become a friend with Simgrid and its features [0%]
+  - [ ] Read SimGrid references.
+  - [ ] Learn how to use Simgrid
+  - [ ] Use MSG
+* TODO Dev goals [0%]
+  - [ ] Add the missing java-examples to MSG directory.
+  - [ ] Complete S4u interface.
+  - [ ] Write a manual for S4U.
