@@ -6,14 +6,14 @@
   - Install a virtual machine (linux distribution) thanks to VirtualBox. 
   - Coudln't resize virtual machine display correctly. 
   - Install Simgrid
-  - Install emacs and Org mode (for more details see [[orgmode.org]]). 
+  - Install emacs and Org mode (for more details see [[http://orgmode.org/]]). 
 *** Remained issues 
   - Coudln't resize virtual machine display correctly.
   - PC issues : Sometimes I coudn't log in.
 *** Current work (Become a friend with Simgrid and its features)
   - Read SimGrid references.
-       - [[simgrid.gforge.inria.fr/tutorials.php]]
-       - [[simgrid.gforge.inria.fr/documentation.php]]
+       - [[http://simgrid.gforge.inria.fr/tutorials.php]]
+       - [[http://simgrid.gforge.inria.fr/documentation.php]]
   - Learn how to use Simgrid.
   - Use MSG.
 * Our intention in the further weeks
