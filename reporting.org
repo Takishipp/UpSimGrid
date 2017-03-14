@@ -9,7 +9,7 @@
   - Install emacs and Org mode (for more details see [[orgmode.org]]). 
 *** Remained issues 
   - Coudln't resize virtual machine display correctly.
-  - PC issues : (coudn't sign in to my account - bugs).
+  - PC issues : Sometimes I coudn't log in.
 *** Current work (Become a friend with Simgrid and its features)
   - Read SimGrid references.
        - [[simgrid.gforge.inria.fr/tutorials.php]]
