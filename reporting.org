@@ -4,19 +4,24 @@
 ** Week 2 Mar 2017
 *** Acheived things (Preparing Work environment)
   - Install a virtual machine (linux distribution) thanks to VirtualBox. 
-  - Coudln't resize virtual machine display correctly. 
+  - Couldn't resize virtual machine display correctly. 
   - Install Simgrid
   - Install emacs and Org mode (for more details see [[http://orgmode.org/]]). 
 *** Remained issues 
   - Coudln't resize virtual machine display correctly.
-  - PC issues : Sometimes I coudn't log in.
+  - PC issues : Sometimes I couldn't log in.
 *** Current work (Become a friend with Simgrid and its features)
   - Read SimGrid references.
        - [[http://simgrid.gforge.inria.fr/tutorials.php]]
        - [[http://simgrid.gforge.inria.fr/documentation.php]]
   - Learn how to use Simgrid.
   - Use MSG.
-* Our intention in the further weeks
+** Week 3 Mar 2017
+*** Current work 
+  - Change msg OOP C to C++ OOP (more details will be written soon).
+*** Remarks 
+  - Dead link [[https://gitlab.inria.fr/simgrid/simgrid/tree/master/doc/examples/platforms]].
+* Our intention in a further weeks
   - Add the missing java-examples to MSG directory.
-  - Complete S4u interface.
+  - Complete S4U interface.
   - Write a manual for S4U.
