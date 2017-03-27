@@ -16,9 +16,10 @@
        - [[http://simgrid.gforge.inria.fr/documentation.php]]
   - Learn how to use Simgrid.
   - Use MSG.
-** Week 3 Mar 2017
+** Week 3 & 4 Mar 2017
 *** Current work 
-  - Change msg OOP C to C++ OOP (more details will be written soon).
+  - Change msg OOP C to C++ OOP.
+  - Construct UML Diagram for OOP C : to do so, I installed Eclipse Luna version and it modeling tools (see [[https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/neon/1a/eclipse-java-neon-1a-linux-gtk-x86_64.tar.gz]] and [[https://www.eclipse.org/downloads/packages/eclipse-modeling-tools/neon3]]).
 *** Remarks 
   - Dead link [[https://gitlab.inria.fr/simgrid/simgrid/tree/master/doc/examples/platforms]].
 * Our intention in a further weeks
