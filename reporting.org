@@ -22,16 +22,25 @@
   - Construct UML Diagram for OOP C : to do so, I installed Eclipse Luna version and it modeling tools (see [[https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/neon/1a/eclipse-java-neon-1a-linux-gtk-x86_64.tar.gz]] and [[https://www.eclipse.org/downloads/packages/eclipse-modeling-tools/neon3]]).
 *** Remarks 
   - Dead link [[https://gitlab.inria.fr/simgrid/simgrid/tree/master/doc/examples/platforms]]. (Fixed)
-** Week 1-4 Apr 2017
+** Week 1-3 Apr 2017
 *** What's done
   - Construct a first heiarchical class tree on C++ OOP.
 *** Remained ISSUES (Current activity)
-  - Some cases of test didn't work.
+  - Some cases of test didn't work. (fixed)
 *** Dev sheet (self-remainder) 
     There are some tools/techniques that i have used lately in particular 
   - ((nice make -j 4 || make ) && nice ctest -j 4 --output-on-failure ; date) 2>&1 | tee BuilSimGrid.sh.log
     nice command to run a program with modified scheduling priority.
   - valgind 
+** Week 4 Apr 2017
+*** What's done 
+  - fix all issues that were unable to run correctly.
+*** Current work 
+  - Search how to build a suitable forum to simgrid website: for that, the first idea is about searching for several free open source that can fill our needs (as Kunena). 
+** Week 1 May 2017
+*** Current work
+  - Install lamp to work on localhost environment : for that it's useful for the first user to follow the instructions that are given on the following website : [[https://www.linode.com/docs/web-servers/lamp/lamp-on-debian-8-jessie]].     
+  - We will attempt to use Mybb a free open source that give the possibility to have a forum interface on static website ( for more info : [[https://mybb.com/]]).
 * Further objectives
   - Add the missing java-examples to MSG directory.
   - Complete S4U interface.
