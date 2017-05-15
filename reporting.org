@@ -46,6 +46,8 @@
 ** Week 2 May 2017
 *** Current work 
   - I'm tring to fix the problem of tesh-smpi-replay-ti-tracing.
+*** Remainder 
+    To have a good use of git and understand how workflow git works see the following link [[https://help.github.com/articles/what-is-a-good-git-workflow/]]
 * Further objectives
   - Add the missing java-examples to MSG directory.
   - Complete S4U interface.
