@@ -25,7 +25,7 @@
 ** Week 1-3 Apr 2017
 *** What's done
   - Construct a first heiarchical class tree on C++ OOP.
-*** Remained ISSUES (Current activity)
+*** Remained of issues (Current activity)
   - Some cases of test didn't work. (fixed)
 *** Dev sheet (self-remainder) 
     There are some tools/techniques that i have used lately in particular 
@@ -41,6 +41,11 @@
 *** Current work
   - Install lamp to work on localhost environment : for that it's useful for the first user to follow the instructions that are given on the following website : [[https://www.linode.com/docs/web-servers/lamp/lamp-on-debian-8-jessie]].     
   - We will attempt to use Mybb a free open source that give the possibility to have a forum interface on static website ( for more info : [[https://mybb.com/]]).
+*** Remained of issues
+  - After getting mybb as a worthy open-source forum to test, my supervisor told me that we didn't have the right to install mysql on the servers, wich unable us to use mybb. 
+** Week 2 May 2017
+*** Current work 
+  - I'm tring to fix the problem of tesh-smpi-replay-ti-tracing.
 * Further objectives
   - Add the missing java-examples to MSG directory.
   - Complete S4U interface.
