@@ -46,8 +46,13 @@
 ** Week 2 May 2017
 *** Current work 
   - I'm tring to fix the problem of tesh-smpi-replay-ti-tracing.
+  - Attend Martin meetings this week.
 *** Remainder 
     To have a good use of git and understand how workflow git works see the following link [[https://help.github.com/articles/what-is-a-good-git-workflow/]]
+    and there is another belongs to gitlab that i found more useful [[https://about.gitlab.com/2014/09/29/gitlab-flow/]]
+*** Remarks
+  - I tried to resolve the issue that present on github (see the link [[https://github.com/simgrid/simgrid/issues/3]]), so I changed SD_exit to be like MSG_exit and I seems that 
+    all work well.
 * Further objectives
   - Add the missing java-examples to MSG directory.
   - Complete S4U interface.
