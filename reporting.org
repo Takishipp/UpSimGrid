@@ -51,13 +51,29 @@
   + SimgridVerif project with Marie and Samuel.
   + PhD matrin's student. 
   + Betsegow internship subject : Betsegow and Martin have developed an energy model and they use use it on simgrid and ns-3 software that is developed also by 
-    the co-supervisor of Betsegow with theirs students. 
+    the co-supervisor of Betsegow with theirs students.
+  - Attend to Martin's meeting with his PhD student (friday afternoon)   
 *** Remainder 
     To have a good use of git and understand how workflow git works see the following link [[https://help.github.com/articles/what-is-a-good-git-workflow/]]
     and there is another belongs to gitlab that i found more useful [[https://about.gitlab.com/2014/09/29/gitlab-flow/]]
 *** Remarks
   - I tried to resolve the issue that is posted on github (see the link [[https://github.com/simgrid/simgrid/issues/3]]), so I changed SD_exit to be like MSG_exit and I seems that 
     all work well.
+  - I took two days of holiday (wednesday and Thursday) to present HPC work. 
+*** Notes : 
+  + lto : for optimization and inlinization of function.
+  + lua : allowed to do programming stuf on xml code
+  + maintainer_mode : to analizing xml files.
+** week 3 May 2017
+  + Attend mettings with Martin and having an overview about Betsegow internship and what he did.
+  + Read Matrin PhD student's paper about checking models (see doc file).
+  + Firday metting all the day with martin and his PhD student. (where this last has suggested incomplete idea to deal with conflects).
+** week 4 May 2017
+   Holiday.
+** Week 1 Jun 2017
+*** Current work : 
+  - Try to fix memory leak due to trace model
+  - Use signal 'call back' on PJ_ functions.
 * Further objectives
   - Add the missing java-examples to MSG directory.
   - Complete S4U interface.
