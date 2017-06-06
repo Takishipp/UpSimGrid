@@ -72,8 +72,11 @@
    Holiday.
 ** Week 1 Jun 2017
 *** Current work : 
-  - Try to fix memory leak due to trace model
-  - Use signal 'call back' on PJ_ functions.
+  - Try to fix memory leak due to trace model (Done)
+  - Use signal 'callsback' on sg_ functions.
+** Week 2 Jun 2017
+*** Current Work : 
+  - Use a Netpoint signal for sg_instr_new_router function (Done).   
 * Further objectives
   - Add the missing java-examples to MSG directory.
   - Complete S4U interface.
