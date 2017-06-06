@@ -76,7 +76,11 @@
   - Use signal 'callsback' on sg_ functions.
 ** Week 2 Jun 2017
 *** Current Work : 
-  - Use a Netpoint signal for sg_instr_new_router function (Done).   
+  - Use a Netpoint signal for sg_instr_new_router function (Done).
+  - Meeting with samuel, Marie, and Martin about simgridverif. 
+  Marie has wrote memory overflow probability by using textual syntax of Hasl. In order to evaluate how implement that in the system that we want to create.
+  From a first look, the syntax appear a litle bit complicated to  parse nicely. And as effect, the code that samuel has given during the meetting presente an attempt to do the job
+  in python language in order to get an output of a little DSL, and avoid parsing problem in the same occasion. 
 * Further objectives
   - Add the missing java-examples to MSG directory.
   - Complete S4U interface.
