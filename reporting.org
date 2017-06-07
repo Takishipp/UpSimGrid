@@ -78,9 +78,10 @@
 *** Current Work : 
   - Use a Netpoint signal for sg_instr_new_router function (Done).
   - Meeting with samuel, Marie, and Martin about simgridverif. 
-  Marie has wrote memory overflow probability by using textual syntax of Hasl. In order to evaluate how implement that in the system that we want to create.
-  From a first look, the syntax appear a litle bit complicated to  parse nicely. And as effect, the code that samuel has given during the meetting presente an attempt to do the job
-  in python language in order to get an output of a little DSL, and avoid parsing problem in the same occasion. 
+  Marie wrote a memory overflow probability based on textual syntax of Hasl. In order to evaluate how implement it in the system that we want to create.
+  From a first look, the syntax appear a litle bit complicated to parse nicely. And as effect, the code that samuel has given during the meetting presente an interesting attempt to do the job
+  in python language. Furthermore, to get an output of a little DSL, and avoid parsing problem in the same occasion. 
+  - Include netzone reference to sg_instr_AS_begin.
 * Further objectives
   - Add the missing java-examples to MSG directory.
   - Complete S4U interface.
