@@ -65,9 +65,9 @@
   + lua : allowed to do programming stuf on xml code
   + maintainer_mode : to analizing xml files.
 ** week 3 May 2017
-  + Attend mettings with Martin and having an overview about Betsegow internship and what he did.
+  + Attend meetings with Martin and having an overview about Betsegow internship and what he did.
   + Read Matrin PhD student's paper about checking models (see doc file).
-  + Firday metting all the day with martin and his PhD student. (where this last has suggested incomplete idea to deal with conflects).
+  + Firday meeting all the day with martin and his PhD student. (where this last has suggested incomplete idea to deal with conflects).
 ** week 4 May 2017
    Holiday.
 ** Week 1 Jun 2017
@@ -89,7 +89,7 @@
   - Tuesday afternoon 1H30 : Meeting with samuel, Marie, and Martin about simgridverif.
   notes :
   Marie wrote a memory overflow probability based on textual syntax of Hasl. In order to evaluate how implement it in the system that we want to create.
-  From a first look, the syntax appear a litle bit complicated to parse nicely. And as effect, the code that samuel has given during the meetting presente an interesting attempt to do the job
+  From a first look, the syntax appear a litle bit complicated to parse nicely. And as effect, the code that samuel has given during the meeting presente an interesting attempt to do the job
   in python language. Furthermore, to get an output of a little DSL, and avoid parsing problem in the same occasion. 
   - Include netzone reference to sg_instr_AS_begin.  
 * Further objectives
