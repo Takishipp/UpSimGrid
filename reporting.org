@@ -77,11 +77,21 @@
 ** Week 2 Jun 2017
 *** Current Work : 
   - Use a Netpoint signal for sg_instr_new_router function (Done).
-  - Meeting with samuel, Marie, and Martin about simgridverif. 
+  - Correct the leak of memory that correspond to StartLinkEvent (Done).
+  - Correct the leak of memory that correspond to EndLinkEvent.
+** Remark 
+  - observateur_(partron_de_conception)
+  - static simgrid::xbt::signal<void(NetZone&)>onCreation; #NetZone.hpp
+  - see ref. Configure SimGrid in particular (context factory).
+  - do the same thing as oncreation for onseal
+  - applied a signal for sg_instr_new_router.
+*** Meetings :
+  - Tuesday afternoon 1H30 : Meeting with samuel, Marie, and Martin about simgridverif.
+  notes :
   Marie wrote a memory overflow probability based on textual syntax of Hasl. In order to evaluate how implement it in the system that we want to create.
   From a first look, the syntax appear a litle bit complicated to parse nicely. And as effect, the code that samuel has given during the meetting presente an interesting attempt to do the job
   in python language. Furthermore, to get an output of a little DSL, and avoid parsing problem in the same occasion. 
-  - Include netzone reference to sg_instr_AS_begin.
+  - Include netzone reference to sg_instr_AS_begin.  
 * Further objectives
   - Add the missing java-examples to MSG directory.
   - Complete S4U interface.
