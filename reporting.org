@@ -76,15 +76,21 @@
   - Use signal 'callsback' on sg_ functions.
 ** Week 2 Jun 2017
 *** Current Work : 
-  - Use a Netpoint signal for sg_instr_new_router function (Done).
-  - Correct the leak of memory that correspond to StartLinkEvent (Done).
-  - Correct the leak of memory that correspond to EndLinkEvent.
+  - Use a Netpoint signal for sg_instr_new_router function. (Done)
+  - Correct the leak of memory that correspond to StartLinkEvent. (Done)
+  - Correct the leak of memory that correspond to EndLinkEvent. (Done)
+  - Define oncreation and onSeal modules for netZone structure. (Done)
+  - applied a signal for sg_instr_new_router.
 ** Remark 
-  - observateur_(partron_de_conception)
+  - observator_(partron_de_conception)
   - static simgrid::xbt::signal<void(NetZone&)>onCreation; #NetZone.hpp
   - see ref. Configure SimGrid in particular (context factory).
-  - do the same thing as oncreation for onseal
-  - applied a signal for sg_instr_new_router.
+  - Read some ref about Pajé and pajéng. 
+  - Read doc visualization 101 on the website of simgrid
+  In this stage we looking for clean some useless event, in the following we mention the main critea to do it : 
+  - the constructor of an event is used in one place
+  - if it use print and delete.
+  
 *** Meetings :
   - Tuesday afternoon 1H30 : Meeting with samuel, Marie, and Martin about simgridverif.
   notes :
