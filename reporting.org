@@ -101,9 +101,19 @@
     The selected events were cleaned and theirs constructors are turned to a functions. 
 *** Notes about visualization 101 :  
   - 13p : how to use API.
-
-  In this stage we looking for clean some useless event, in the following we mention the main criterea to do it : 
-  - Read  
+  - Categorizing Resource Utilization can be done by Declaring a trace categories, Classify (MSG, SimDAG) tasks.
+  - Registering User Variables and States.
+*** Events : 
+  - Attend to Scientific English Workshop day (Thursday)
+  - Friday was a Day off for a personal matter.   
+* Week 4 Jun 2017
+** Current work 
+  - run msg example : 
+  as an example, I took app-chainsend example, and I run the following command : 
+  ./chainsend ./../../../../examples/platforms/small_platform.xml ../../../../examples/msg/app-chainsend/app-chainsend_d.xml   
+  as an output one got a file *.trace that could be visualized via pj-gantt, viva,..etc.
+** Remark : 
+    Unfortunately, pajeng didn't work, and the visualization with viva wasn't understandable (2 warrning messages).
 * Further objectives
   - Add the missing java-examples to MSG directory.
   - Complete S4U interface.
