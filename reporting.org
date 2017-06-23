@@ -64,11 +64,11 @@
   + lto : for optimization and inlinization of function.
   + lua : allowed to do programming stuf on xml code
   + maintainer_mode : to analizing xml files.
-* week 3 May 2017
+* Week 3 May 2017
   + Attend meetings with Martin and having an overview about Betsegow internship and what he did.
   + Read Matrin PhD student's paper about checking models (see doc file).
   + Firday meeting all the day with martin and his PhD student. (where this last has suggested incomplete idea to deal with conflects).
-* week 4 May 2017
+* Week 4 May 2017
    Holiday.
 * Week 1 Jun 2017
 ** Current work : 
@@ -108,10 +108,18 @@
   - Friday was a Day off for a personal matter.   
 * Week 4 Jun 2017
 ** Current work 
+  - Clean another event and switch its constructor into function. (done)
+  - Install eclipse. (done)
+  - Read about 
   - run msg example : 
   as an example, I took app-chainsend example, and I run the following command : 
   ./chainsend ./../../../../examples/platforms/small_platform.xml ../../../../examples/msg/app-chainsend/app-chainsend_d.xml   
   as an output one got a file *.trace that could be visualized via pj-gantt, viva,..etc.
+** Notes : 
+  - Trace module can be used to trace any simgrid simulation and it give a pajetrace outputfile.
+  - Categorie allowed to know who use the computation ressources.   
+** Events :
+  - Two days off (Tuesday and wednesday) for a personal matter.   
 ** Remark : 
     Unfortunately, pajeng didn't work, and the visualization with viva wasn't understandable (2 warrning messages).
 * Further objectives
