@@ -108,8 +108,10 @@
 ** Current work 
   - Clean another event and switch its constructor into function. (done)
   - Install eclipse. (done)
+*** Configure Simgrid (visualization) 
+  - Selecting the virtualization factory could be done throught the use of containers, also called context. This latter could be selected in order to use it 
+  with the contexts/factory configuration item.  
   - see ref. Configure SimGrid in particular (context factory) see the following link [[http://simgrid.gforge.inria.fr/simgrid/3.16/doc/options.html]].
-  - Read about 
   - run msg example : 
   as an example, I took app-chainsend example, and I run the following command : 
   ./chainsend ./../../../../examples/platforms/small_platform.xml ../../../../examples/msg/app-chainsend/app-chainsend_d.xml   
