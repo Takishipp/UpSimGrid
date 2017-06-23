@@ -91,8 +91,6 @@
 * Week 3 Jun 2017
 ** Current work : 
   - observator_(partron_de_conception)
-  - static simgrid::xbt::signal<void(NetZone&)>onCreation; #NetZone.hpp
-  - see ref. Configure SimGrid in particular (context factory).
   - Read some ref about Pajé and pajéng. 
 *** Clean useless class of events.
     The cleaning was done by steps. First of all, we looked for the events that verify the below critera : 
@@ -110,6 +108,7 @@
 ** Current work 
   - Clean another event and switch its constructor into function. (done)
   - Install eclipse. (done)
+  - see ref. Configure SimGrid in particular (context factory) see the following link [[http://simgrid.gforge.inria.fr/simgrid/3.16/doc/options.html]].
   - Read about 
   - run msg example : 
   as an example, I took app-chainsend example, and I run the following command : 
