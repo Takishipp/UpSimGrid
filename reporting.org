@@ -108,7 +108,6 @@
 ** Current work 
   - Clean another event and switch its constructor into function. (done)
   - Install eclipse. (done)
-  - Investigate visualization implementation in simgrid.
 *** Notes about configure Simgrid (virtualization) 
   - Selecting the virtualization factory could be done throught the use of containers, also called context. This latter could be selected in order to use it 
   with the contexts/factory configuration item.  
@@ -124,6 +123,11 @@
   - Two days off (Tuesday and wednesday) for a personal matter.   
 ** Remark : 
     Unfortunately, pajeng didn't work, and the visualization with viva wasn't understandable (2 warrning messages).
+* Week 5 Jun 2017
+** Current work 
+  - Investigate visualization implementation in simgrid.
+** Events :
+  - Two days off (monday) for a personal matter.    
 * Further objectives
   - Add the missing java-examples to MSG directory.
   - Complete S4U interface.
