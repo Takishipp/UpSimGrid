@@ -126,13 +126,13 @@
 * Week 5 Jun 2017
 ** Current work 
   - Investigate visualization implementation in simgrid.
-  - 
+  - trying to resolve issues due to sg_instr_new_router changes.
 ** NOTES
   - To use gdb with valgrind see the following link [[https://fau.re/blog/20140330_vgdb.html]].
   - To change the eclipse's theme see [[https://www.youtube.com/watch?v=a-vRRoQAnR0]].
   - Debian paste zone [[http://paste.debian.net/]].
 ** Events :
-  - Two days off (monday) for a personal matter.    
+  - Days off (monday) for a personal matter.    
 * Further objectives
   - Add the missing java-examples to MSG directory.
   - Complete S4U interface.
