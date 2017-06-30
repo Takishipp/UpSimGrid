@@ -135,7 +135,15 @@
   - After that : valgrind will ask to run gdb ./..
   - target remote | vgdb
 ** Events :
-  - Days off (monday) for a personal matter.    
+  - Days off (monday) for a personal matter. 
+* Week 1 Jul 2017
+** Current work 
+  - Follow first week of corsera, corsera class [[https://www.coursera.org/learn/c-plus-plus-a]].  
+  - Analyze stanford courses and follow it, follow course about debugin in C [[https://courseware.stanford.edu/pg/courses/lectures/371747]] 
+  - terminal vt100.
+  - Find bug and unclear formulation see the link [[https://simgrid.github.io/SMPI_CourseWare/]].
+  fork the space from [[https://github.com/simgrid/SMPI_CourseWare]].
+  - Check if it works for simgrid 3.16.
 * Further objectives
   - Add the missing java-examples to MSG directory.
   - Complete S4U interface.
