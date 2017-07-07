@@ -142,6 +142,9 @@
   - Analyze stanford courses and follow it, follow course about debugin in C [[https://courseware.stanford.edu/pg/courses/lectures/371747]] 
   - Fork SMPI_CourseWare space from [[https://github.com/simgrid/SMPI_CourseWare]]. (Done)
   - Find bug and unclear formulation [[https://simgrid.github.io/SMPI_CourseWare/]]. (All right)
+** Notes : 
+  - gdb tutorial : [[https://courseware.stanford.edu/pg/pages/view/332668/cs107-guide-to-gdb]]
+  - valgrind tutorial : [[https://courseware.stanford.edu/pg/pages/view/332678/cs107-guide-to-valgrind]]
 ** Events : 
   - Attend Anna's PhD defense (thursday morning).
 * Further objectives
