@@ -137,16 +137,25 @@
 ** Events :
   - Days off (monday) for a personal matter. 
 * Week 1 Jul 2017
-** Current work 
-  - Follow corsera's courses, corsera class [[https://www.coursera.org/learn/c-plus-plus-a]]. (1-3 done)  
+** Current work
+  - Follow corsera's courses, corsera class [[https://www.coursera.org/learn/c-plus-plus-a]]. (week 1 to week 3 done)   
   - Analyze stanford courses and follow it, follow course about debugin in C [[https://courseware.stanford.edu/pg/courses/lectures/371747]] 
   - Fork SMPI_CourseWare space from [[https://github.com/simgrid/SMPI_CourseWare]]. (Done)
   - Find bug and unclear formulation [[https://simgrid.github.io/SMPI_CourseWare/]]. (All right)
 ** Notes : 
   - gdb tutorial : [[https://courseware.stanford.edu/pg/pages/view/332668/cs107-guide-to-gdb]]
   - valgrind tutorial : [[https://courseware.stanford.edu/pg/pages/view/332678/cs107-guide-to-valgrind]]
+*** Coursera's courses :
+  - C++ as a Better C. (done)
+  - Basics of Generics and Classes. (done)
+  - C++ and OO; Lists. (done)
+  - Minimum Spanning Tree & Standard Template Library.
 ** Events : 
-  - Attend Anna's PhD defense (thursday morning).
+  - Attend Anna's PhD defense (Thursday).
+  - medical check-up requested by INRIA (Friday).
+* Week 2 Jul 2017
+** Current work 
+  - Check SMPI_CourseWare examples on the new release 3.16 of simgrid.   
 * Further objectives
   - Add the missing java-examples to MSG directory.
   - Complete S4U interface.
