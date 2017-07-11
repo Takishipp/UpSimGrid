@@ -156,6 +156,9 @@
 * Week 2 Jul 2017
 ** Current work 
   - Check SMPI_CourseWare examples on the new release 3.16 of simgrid.   
+  - Read [[ http://simgrid.gforge.inria.fr/simgrid/3.17/doc/uhood_tech.html]]
+** Notes 
+  - Sonar could be an useful tools for the manifactoring of simgrid [[https://sonarcloud.io/dashboard?id=simgrid]].
 * Further objectives
   - Add the missing java-examples to MSG directory.
   - Complete S4U interface.
