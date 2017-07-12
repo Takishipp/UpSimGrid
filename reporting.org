@@ -159,6 +159,8 @@
   - Read [[ http://simgrid.gforge.inria.fr/simgrid/3.17/doc/uhood_tech.html]]
 ** Notes 
   - Sonar could be an useful tools for the manifactoring of simgrid [[https://sonarcloud.io/dashboard?id=simgrid]].
+  - Correct SMPI_Corseware pages.
+  - Add report an issues and contact us link [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/community.html#community_contact]].
 * Further objectives
   - Add the missing java-examples to MSG directory.
   - Complete S4U interface.
