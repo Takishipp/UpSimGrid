@@ -161,6 +161,12 @@
   - Sonar could be an useful tools for the manifactoring of simgrid [[https://sonarcloud.io/dashboard?id=simgrid]].
   - Correct SMPI_Corseware pages.
   - Add report an issues and contact us link [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/community.html#community_contact]].
+* Week 3 Jul 2017
+** Current work 
+  - Make some optimizations of instr code.
+  - Install PlantUML [[https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml]] and [[http://plantuml.com/]]
+  - change Pj_values to a class.
+  - Read [[https://github.com/mquinson/prog_scala/blob/master/01-OOP-design/OOP-design.pdf]] and [[https://github.com/mquinson/C-2nd-language/blob/master/TDP/11-OOP-dipoles/OOP-dipoles.pdf]]
 * Further objectives
   - Add the missing java-examples to MSG directory.
   - Complete S4U interface.
