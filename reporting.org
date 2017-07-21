@@ -167,6 +167,8 @@
   - change Pj_values to a class.
   - Read [[https://github.com/mquinson/prog_scala/blob/master/01-OOP-design/OOP-design.pdf]] and [[https://github.com/mquinson/C-2nd-language/blob/master/TDP/11-OOP-dipoles/OOP-dipoles.pdf]].
   - Add report an issues and contact us link [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/community.html#community_contact]]. (Done but not yet tested)
+** Notes : 
+  - An important notion in OOP is the" singleton. To have an idea see the following link [[http://come-david.developpez.com/tutoriels/dps/?page=Singleton]].
 * Further objectives
   - Add the missing java-examples to MSG directory.
   - Complete S4U interface.
