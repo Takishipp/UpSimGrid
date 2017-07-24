@@ -169,6 +169,9 @@
   - Add report an issues and contact us link [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/community.html#community_contact]]. (Done but not yet tested)
 ** Notes : 
   - An important notion in OOP is the" singleton. To have an idea see the following link [[http://come-david.developpez.com/tutoriels/dps/?page=Singleton]].
+* Week 4 Jul 2017
+** Current work
+  - Make some optimization in the code of trace.
 * Further objectives
   - Add the missing java-examples to MSG directory.
   - Complete S4U interface.
