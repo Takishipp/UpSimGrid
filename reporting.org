@@ -172,6 +172,11 @@
 * Week 4 Jul 2017
 ** Current work
   - Make some optimization in the code of trace.
+  - Remove c allocation for value constructor and use cpp allocation instead.
+  - Learn about singleton notion in OOP.
+* Week 1 Aug 2017
+** Current work
+  - Change c allocation everwhere and replace it by cpp allocation.
 * Further objectives
   - Add the missing java-examples to MSG directory.
   - Complete S4U interface.
