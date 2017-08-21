@@ -184,7 +184,7 @@
   - Follow Coursera's courses about algorithms [[https://www.coursera.org/learn/algorithms-part1]] and [[https://www.coursera.org/learn/algorithms-part2]]
 ** Notes : 
   - Coursera book [[http://algs4.cs.princeton.edu/home/]]
-* Further objectives
-  - Add the missing java-examples to MSG directory.
-  - Complete S4U interface.
-  - Write a manual for S4U.
+* Week 3 Aug 2017
+** Current work
+  - Normalize class notation (i.e. s_type -> Type, type_t->Type*, s_type_get->get).
+  - Give methods and constructors to s_type, s_container,value.
