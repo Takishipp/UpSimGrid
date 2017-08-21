@@ -178,6 +178,7 @@
 ** Current work
   - Change c allocation everwhere and replace it by cpp allocation.
   - Dessiner un CRC formel.
+  - Add contact page to courseware. 
 * Week 2 Aug 2017
 ** Current work 
   - Remove event class that aren't used anymore.
