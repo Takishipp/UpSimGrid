@@ -190,6 +190,10 @@
 ** Current work
   - Normalize class notation (i.e. s_type -> Type, type_t->Type*, s_type_get->get).
   - Give methods and constructors to s_type, s_container,value.
+  - Correct some issues located by sonar.
+  - Follow Stacks courses on coursera.
+  - Check that SMPI_Corseware examples work with the new version of simgrid 3.16 (It's not the cas).
+* Week 4 Aug 2017
   - Convert MSG examples to S4U platform ( the main idea, is tu pick the examples that have a pedagogy spirit. For that, We'v to do it properly
   and adding a documentation in order to get the code the explicite form possible).
   - For each example, We'v add a description of the example and make it easy to reach in the documentation.
