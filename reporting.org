@@ -197,3 +197,41 @@
   - Convert MSG examples to S4U platform ( the main idea, is tu pick the examples that have a pedagogy spirit. For that, We'v to do it properly
   and adding a documentation in order to get the code the explicite form possible).
   - For each example, We'v add a description of the example and make it easy to reach in the documentation.
+* Week 1 Sept 2017
+  - Convert async-waitall, async-waitany.
+  - Add a descrption of the added examples to the manual. 
+** Notes : 
+  - the manual of MSG could be found via the following link : [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/group__msg__examples.html]], 
+  - The manual fo S4U could be found via the following link : [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/group__s4u__examples.html]],
+  - 
+    #+BEGIN_SRC C++
+      double* task = static_cast<double*>(mailbox->get());
+      xbt_assert(task != nullptr, "mailbox->get() failed");
+      double comp_size = *task;
+      delete task;
+      if (comp_size < 0) { /* - Exit when -1.0 is received */
+        XBT_INFO("I'm done. See you!");
+        break;
+      }
+      /*  - Otherwise, process the task */
+      simgrid::s4u::this_actor::execute(comp_size);
+    #+END_SRC
+
+    #+BEGIN_SRC C
+        XBT_INFO("Wait to receive a task");
+    msg_task_t task = NULL;
+    msg_comm_t comm = MSG_task_irecv(&task, mailbox);
+    msg_error_t res = MSG_comm_wait(comm, -1);
+    xbt_assert(res == MSG_OK, "MSG_task_get failed");
+    MSG_comm_destroy(comm);
+    XBT_INFO("Received \"%s\"", MSG_task_get_name(task));
+    if (strcmp(MSG_task_get_name(task), "finalize") == 0) {
+      MSG_task_destroy(task);
+      break;
+    }
+
+    XBT_INFO("Processing \"%s\"", MSG_task_get_name(task));
+    MSG_task_execute(task);
+    XBT_INFO("\"%s\" done", MSG_task_get_name(task));
+    MSG_task_destroy(task);
+    #+END_SRC
