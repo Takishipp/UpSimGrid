@@ -201,10 +201,10 @@
   - Convert async-waitall, async-waitany.
   - Add a descrption of the added examples to the manual. 
 ** Notes : 
-  - the manual of MSG could be found via the following link : [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/group__msg__examples.html]], 
-  - The manual fo S4U could be found via the following link : [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/group__s4u__examples.html]],
-  - 
-    #+BEGIN_SRC C++
+  - The manual of MSG could be found via the following link : [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/group__msg__examples.html]], 
+  - The manual of S4U could be found via the following link : [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/group__s4u__examples.html]],
+  - The way to add an example is explained via the link : [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/inside_tests.html#inside_tests_add_integration]]
+  -  #+BEGIN_SRC C++
       double* task = static_cast<double*>(mailbox->get());
       xbt_assert(task != nullptr, "mailbox->get() failed");
       double comp_size = *task;
@@ -218,7 +218,7 @@
     #+END_SRC
 
     #+BEGIN_SRC C
-        XBT_INFO("Wait to receive a task");
+    XBT_INFO("Wait to receive a task");
     msg_task_t task = NULL;
     msg_comm_t comm = MSG_task_irecv(&task, mailbox);
     msg_error_t res = MSG_comm_wait(comm, -1);
