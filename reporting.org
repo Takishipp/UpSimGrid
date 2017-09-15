@@ -200,6 +200,9 @@
 * Week 1 Sept 2017
   - Convert async-waitall, async-waitany.
   - Add a descrption of the added examples to the manual. 
+* Week 2 Sept 2017
+  - Debug s4u-async (wait, waitall, and waitany) examples and pass to s4u-energy examples
+  - Start to prepear the slids and the report to the conference of the 28th september at INRIA. 
 ** Notes : 
   - The manual of MSG could be found via the following link : [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/group__msg__examples.html]], 
   - The manual of S4U could be found via the following link : [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/group__s4u__examples.html]],
