@@ -203,6 +203,14 @@
 * Week 2 Sept 2017
   - Debug s4u-async (wait, waitall, and waitany) examples and pass to s4u-energy examples
   - Start to prepear the slids and the report to the conference of the 28th september at INRIA. 
+* Week 3 Sept 2017
+  - Work on the slides and its schemes (CRC, UML,..etc) for the ADT day.
+  - Debug s4u-energy-onoff and read about SimGrid testing process.
+  - Complete the slides according the given remarks.
+* Week 4 Sept 2017
+  - Prepear the speech for the presentation.
+  - Follow the lasts change on github "memory leak is in the lowest level ever".
+  - Debug s4u-wait.
 ** Notes : 
   - The manual of MSG could be found via the following link : [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/group__msg__examples.html]], 
   - The manual of S4U could be found via the following link : [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/group__s4u__examples.html]],

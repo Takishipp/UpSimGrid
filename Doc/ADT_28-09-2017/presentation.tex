@@ -1,0 +1,125 @@
+\documentclass[11pt]{beamer}
+
+%=================================================
+% theme and color
+%=================================================
+\usetheme{Warsaw} %Themes http://www.hartwork.org/beamer-theme-matrix/
+\definecolor{colorA}{RGB}{0, 140, 200}
+\definecolor{colorB}{RGB}{140, 151, 154}
+%\definecolor{secinhead}{RGB}{249,196,95}
+%\definecolor{titlebg}{RGB}{51,51,51}
+\setbeamercolor{structure}{fg=colorA,bg=colorB}
+%\setbeamercolor{secsubsec}{fg=secinhead,bg=black}
+%\setbeamercolor{frametitle}{fg=secinhead,bg=titlebg}
+
+%=================================================
+% packages and new commands
+%=================================================
+\usepackage{xcolor}
+\usepackage[ruled, linesnumbered, vlined]{algorithm2e}
+\usepackage{epsfig, subfigure, amssymb, multirow, algorithmic, amsmath}
+\newcommand*{\superscript}[1]{\ensuremath{^{\rm #1}}}
+\newcommand*{\subscript}[1]{\ensuremath{_{\rm #1}}}
+
+%=================================================
+
+\newenvironment<>{proposition}[1][\undefined]{%
+\begin{actionenv}#2%
+\ifx#1\undefined%
+   \def\insertblocktitle{Proposition}%
+\else%
+   \def\insertblocktitle{Proposition ({\em#1})}%
+\fi%
+\par%
+\mode<presentation>{%
+%  \setbeamercolor{block title}{fg=white,bg=yellow!50!black}
+%  \setbeamercolor{block body}{fg=black,bg=yellow!20}
+}%
+\usebeamertemplate{block begin}\em}
+{\par\usebeamertemplate{block end}\end{actionenv}}
+
+
+
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+
+% thesis details (preamble)
+%=================================================
+\title[{\sc  } \hspace{0.8cm} \insertframenumber/\inserttotalframenumber]{{\sc Simgrid as a platform }}
+\author[Myriads - ADT]{{Toufik Boubehziz}}%--- {\sc Feb 10\superscript{th}, 2015}
+\date{September 28, 2017}
+\institute{INRIA - Bretagne Atlantique}
+
+%=================================================
+% start presentation
+%=================================================
+\begin{document}
+
+%========================
+
+
+% title page
+%========================
+\begin{frame}
+\maketitle
+\begin{center}
+\includegraphics[width=3.5cm]{figures/inria.png}
+\end{center}
+\end{frame}
+
+%========================
+% your slides:
+%========================
+\section{Overview of SimGrid APIs}
+\begin{frame}
+SimGrid is a simulator project that provides core toolkit for the simulation of distributed applications in heterogeneous distributed environments.\\
+\begin{figure}
+\includegraphics[width=11cm]{figures/simgrid.png}
+\end{figure}
+The aim goal of the project is to give an efficient tool for research in the area distributed large scale systems, like as Grids, P2P systems and Cloud.
+\end{frame}
+
+\begin{frame}
+\tableofcontents
+\end{frame}
+
+
+\input{slides/overview}
+
+%========================
+% example slides:
+%========================
+\section{Tracing simulation}
+\input{slides/instr}
+%------------------------
+\section{S4U interface}
+\input{slides/s4u}
+%------------------------
+\section{Simgrid numerical support}
+\input{slides/corseware}
+%------------------------
+\section{Community and backup}
+%\subsection{Bugs tracking}
+\input{slides/otherwise}
+%------------------------
+
+%------------------------
+\section{Perspectives}
+\input{slides/perspectives}
+%========================
+% bibliography
+%========================
+%\input{slides/bib}
+
+%=================================================
+% end presentation
+%=================================================
+\end{document}
