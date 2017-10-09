@@ -215,7 +215,27 @@
   - The manual of MSG could be found via the following link : [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/group__msg__examples.html]], 
   - The manual of S4U could be found via the following link : [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/group__s4u__examples.html]],
   - The way to add an example is explained via the link : [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/inside_tests.html#inside_tests_add_integration]]
-  -  #+BEGIN_SRC C++
+
+* Week 1 Oct 2017
+  - Convert actor-execute actor-startkilltime s4u-wait to s4u API
+** Notes : 
+- cloud : 
+cloud-masterworker could-migration clou-simple cloud-two-tasks
+- energy :
+energy-consumption energy-pstate energy-pstack energy-vm
+- trace :
+ trace-categories trace-host-user-variables trace-lin-user-variables trace-link-user-variables
+trace-masterworker trace-platform trace-route-user-variables
+- io : 
+ io-file io-remote io-storage 
+- process (actor) : 
+process-join process-join process-yield 
+- others : 
+platform-faitures platform-properties task-priority maestro-set mc network-ns3 app-chainsend 
+
+
+
+#+BEGIN_SRC C
       double* task = static_cast<double*>(mailbox->get());
       xbt_assert(task != nullptr, "mailbox->get() failed");
       double comp_size = *task;
