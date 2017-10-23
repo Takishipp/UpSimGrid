@@ -232,8 +232,12 @@ trace-masterworker trace-platform trace-route-user-variables
 process-join process-join process-yield 
 - others : 
 platform-faitures platform-properties task-priority maestro-set mc network-ns3 app-chainsend 
-
-
+* Week 2 Oct 2017
+- Debug energy-onoff, actor-join and actor-yield example.
+- seminar INRIA 12-13. 
+* Week 3 Oct 2017
+- Build semaphore example in the same spirit of mutex example.
+- Complete actor-priority example and suggest a additional function that takes the actor priority in count.
 
 #+BEGIN_SRC C
       double* task = static_cast<double*>(mailbox->get());
