@@ -238,7 +238,8 @@ platform-faitures platform-properties task-priority maestro-set mc network-ns3 a
 * Week 3 Oct 2017
 - Build semaphore example in the same spirit of mutex example.
 - Complete actor-priority example and suggest a additional function that takes the actor priority in count.
-
+* Week 4 Oct - 1 Nov 2017
+- Out of office. 
 #+BEGIN_SRC C
       double* task = static_cast<double*>(mailbox->get());
       xbt_assert(task != nullptr, "mailbox->get() failed");
