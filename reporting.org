@@ -240,6 +240,14 @@ platform-faitures platform-properties task-priority maestro-set mc network-ns3 a
 - Complete actor-priority example and suggest a additional function that takes the actor priority in count.
 * Week 4 Oct - 1 Nov 2017
 - Out of office. 
+** Notes : 
+- cloud examples for s4u API isn't possible for the moment of reason that some basic functionalities of s4u APIs are not yet available. 
+* Week 2 Nov 2017
+- Write s4u-test-any example that ends when at least one of the vectors ends.
+** Study the issues : 
+- #233 : teshsuit/suf/maxminbench to check if it possible tu use google bench to show graphicaly the evolution of simgrid.
+- #194 : test-any example.
+- #189 : Energy consumption of parallel tasks.
 #+BEGIN_SRC C
       double* task = static_cast<double*>(mailbox->get());
       xbt_assert(task != nullptr, "mailbox->get() failed");
