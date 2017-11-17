@@ -245,7 +245,8 @@ platform-faitures platform-properties task-priority maestro-set mc network-ns3 a
 * Week 2 Nov 2017
 - Write s4u-test-any example that ends when at least one of the vectors ends.
 ** Study the issues : 
-- #233 : teshsuit/suf/maxminbench to check if it possible tu use google bench to show graphicaly the evolution of simgrid.
+- #233 : [[https://github.com/google/benchmark]] check if it possible tu use google bench to show graphicaly the evolution of simgrid.
+[[https://github.com/google/benchmark/blob/master/docs/tools.md]].
 - #194 : test-any example.
 - #189 : Energy consumption of parallel tasks.
 #+BEGIN_SRC C
