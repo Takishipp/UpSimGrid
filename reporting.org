@@ -249,6 +249,8 @@ platform-faitures platform-properties task-priority maestro-set mc network-ns3 a
 [[https://github.com/google/benchmark/blob/master/docs/tools.md]].
 - #194 : test-any example.
 - #189 : Energy consumption of parallel tasks.
+* Week 3 Nov 2017
+- Simgrid user's days - location : Le Bono.
 #+BEGIN_SRC C
       double* task = static_cast<double*>(mailbox->get());
       xbt_assert(task != nullptr, "mailbox->get() failed");
