@@ -251,9 +251,10 @@ platform-faitures platform-properties task-priority maestro-set mc network-ns3 a
 - #189 : Energy consumption of parallel tasks.
 * Week 3 Nov 2017
 - Simgrid user's days - location : Le Bono.
-the days were started by a general presentation of simgrid performed by Martin Quinson in monday 
+- the days were started by a general presentation of simgrid performed by Martin Quinson in monday 
 afternoon.
-
+- 2nd day, we had at the morning a presentation about tracing model performed by Arnaud.
+- energy-pstate is successfully converted to s4u API.
 #+BEGIN_SRC C
       double* task = static_cast<double*>(mailbox->get());
       xbt_assert(task != nullptr, "mailbox->get() failed");
