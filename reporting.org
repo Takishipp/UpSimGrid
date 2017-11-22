@@ -256,6 +256,8 @@ afternoon.
 - 2nd day, we had at the morning a presentation about tracing model performed by Arnaud.
 - energy-pstate is successfully converted to s4u API.
 - 3rd day, we had at the morngin a presentation about context switching performed by Martin.
+- New mission : test benchmark examples of mantevo, NERSC-8/ Trinity and CORAL-Benchmark with smpi and make testing report on issue report on github.
+[[https://asc.llnl.gov/CORAL-benchmarks/]], [[http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/]], and [[https://mantevo.org/download/]]
 * Notes to convert msg models to s4u API : 
 ** task execute : 
 a task in msg turn to an actor in s4u.
