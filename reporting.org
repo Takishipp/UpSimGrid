@@ -339,9 +339,6 @@ on s4u :
 - trace-platform 
 - trace-process-migration 
 - trace-route-user-variables 
-** IO : 
-- io-remote 
-- io-storage
 ** others :
 - maestro-set 
 - mc
