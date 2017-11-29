@@ -325,7 +325,7 @@ on s4u :
 - energy-consumption (cannot be converted yet)
 - energy-onoff (converted)
 - energy-pstate (converted)
-- energy-pstack (not converted)
+- energy-pstack (not converted yet)
 - energy-vm (cannot be converted yet)
 - app-chainsend (cannot be converted yet)
 ** Platform (not converted yet)
@@ -340,7 +340,6 @@ on s4u :
 - trace-process-migration 
 - trace-route-user-variables 
 ** IO : 
-- io-file
 - io-remote 
 - io-storage
 ** others :
