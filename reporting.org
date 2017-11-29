@@ -258,6 +258,8 @@ afternoon.
 - 3rd day, we had at the morngin a presentation about context switching performed by Martin.
 - New mission : test benchmark examples of mantevo, NERSC-8/ Trinity and CORAL-Benchmark with smpi and make testing report on issue report on github.
 [[https://asc.llnl.gov/CORAL-benchmarks/]], [[http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/]], and [[https://mantevo.org/download/]]
+* Week 4 Nov 2017
+** Study benchmark examples (a list will be provide soon)
 * Notes to convert msg models to s4u API : 
 ** task execute : 
 a task in msg turn to an actor in s4u.
@@ -303,3 +305,45 @@ on s4u :
   #+BEGIN_SRC C
      simgrid::s4u::Engine::getClock();
   #+END_SRC
+* List of the remaining msg examples to convert to s4u API : 
+** actor (converted)
+- actor-create
+- actor-join 
+- actor-yield
+- actor-starkilltime
+** async : (converted) 
+- async-waitall 
+- async-waitany 
+- async-waitall 
+** could (cannot be converted yet) : 
+- cloud-simple
+- cloud-capping 
+- cloud-masterworker 
+- cloud-migration
+- cloud-two-tasks
+** energy :
+- energy-consumption (cannot be converted yet)
+- energy-onoff (converted)
+- energy-pstate (converted)
+- energy-pstack (not converted)
+- energy-vm (cannot be converted yet)
+- app-chainsend (cannot be converted yet)
+** Platform (not converted yet)
+- platform-faitures 
+- platform-properties 
+** trace (cannot be converted yet)
+- trace-categrories  
+- trace-host-user-variables
+- trace-link-user-variables
+- trace-masterworker
+- trace-platform 
+- trace-process-migration 
+- trace-route-user-variables 
+** IO : 
+- io-file
+- io-remote 
+- io-storage
+** others :
+- maestro-set 
+- mc
+- network-ns3
