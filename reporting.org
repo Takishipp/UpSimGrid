@@ -260,6 +260,18 @@ afternoon.
 [[https://asc.llnl.gov/CORAL-benchmarks/]], [[http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/]], and [[https://mantevo.org/download/]]
 * Week 4 Nov 2017
 ** Study benchmark examples (a list will be provide soon)
+* Week 1 Dec 2017
+- Day off for the afternoon of monday.
+- Working on synchro-semaphore example.
+** Learn Grid5000
+- to get started : [[https://www.grid5000.fr/mediawiki/index.php/Getting_Started]]
+- a grid500 tutorial, there is a library called EnOSLib that allowed to deploy an applications on grid'5000 : [[http://enoslib.readthedocs.io/en/latest/tutorials/grid5000.html]] 
+- the workline on grid5000 is the following : 
+1) reverve ressources
+2) deploy
+3) Configure nodes 
+** Grid5000 Notes :
+-  
 * Notes to convert msg models to s4u API : 
 ** task execute : 
 a task in msg turn to an actor in s4u.
