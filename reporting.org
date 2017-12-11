@@ -267,8 +267,9 @@ afternoon.
 - to get started : [[https://www.grid5000.fr/mediawiki/index.php/Getting_Started]]
 - a grid500 tutorial, there is a library called EnOSLib that allowed to deploy an applications on grid'5000 : [[http://enoslib.readthedocs.io/en/latest/tutorials/grid5000.html]] 
 - the workline on grid5000 is the following : 
-1) reverve ressources
-2) deploy
+0) Get connected : ssh login@access.grid5000.fr
+1) choose a site  (Grenoble, Rennes, Nancy, ...) : ssh rennes 
+2) reserve ressources and deploy :oarsub -I -l nodes=1,walltime=1:45 -t deploy
 3) Configure nodes 
 ** Grid5000 Notes :
 -  
