@@ -266,13 +266,13 @@ afternoon.
 ** Learn Grid5000
 - to get started : [[https://www.grid5000.fr/mediawiki/index.php/Getting_Started]]
 - a grid500 tutorial, there is a library called EnOSLib that allowed to deploy an applications on grid'5000 : [[http://enoslib.readthedocs.io/en/latest/tutorials/grid5000.html]] 
+** Grid5000 Notes :
 - the workline on grid5000 is the following : 
 0) Get connected : ssh login@access.grid5000.fr
 1) choose a site  (Grenoble, Rennes, Nancy, ...) : ssh rennes 
 2) reserve ressources and deploy :oarsub -I -l nodes=1,walltime=1:45 -t deploy
-3) Configure nodes 
-** Grid5000 Notes :
--  
+3) Install an OS : kadeploy3 -f $OAR_NODE_FILE -e debian9-x64-nfs -k
+4) Connect to the node as root ssh -l root parasilo-28.rennes.grid5000.fr
 * Notes to convert msg models to s4u API : 
 ** task execute : 
 a task in msg turn to an actor in s4u.
