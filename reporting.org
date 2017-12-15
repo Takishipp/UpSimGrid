@@ -257,7 +257,7 @@ afternoon.
 - energy-pstate is successfully converted to s4u API.
 - 3rd day, we had at the morngin a presentation about context switching performed by Martin.
 - New mission : test benchmark examples of mantevo, NERSC-8/ Trinity and CORAL-Benchmark with smpi and make testing report on issue report on github.
-[[https://asc.llnl.gov/CORAL-benchmarks/]], [[http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/]], and [[https://mantevo.org/download/]]
+[[https://asc.llnl.gov/CORAL-benchmarks/][CORAL-Benchmark]], [[http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/][trinity-nersc]], and [[https://mantevo.org/download/][mantevo]]
 * Week 4 Nov 2017
 ** Study benchmark examples (a list will be provide soon)
 * Week 1 Dec 2017
@@ -273,7 +273,9 @@ afternoon.
 - Testing CORAL-benchmark (Bigsort, CORAL MPI-benchmarks, IO).
 - Day off for the morning of Thursday.
 ** Friday meeting brefing :
-- 
+- Make a table for the benchmak codes with theirs status.
+- Learn about trampline to use emacs with grid5000.
+- Read the following report : [[https://github.com/mquinson/simgrid-simpar/blob/master/report.org][ssh_report]]
 ** Grid5000 Notes :
 - to see the rent jobs : oarstat -u 
 - the workline on grid5000 is the following : 
