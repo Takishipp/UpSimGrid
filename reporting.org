@@ -212,8 +212,8 @@
   - Follow the lasts change on github "memory leak is in the lowest level ever".
   - Debug s4u-wait.
 ** Notes : 
-  - The manual of MSG could be found via the following link : [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/group__msg__examples.html]], 
-  - The manual of S4U could be found via the following link : [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/group__s4u__examples.html]],
+  - The manual of MSG could be found via the following link : [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/group__msg__examples.html][msg_examples]], 
+  - The manual of S4U could be found via the following link : [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/group__s4u__examples.html][s4u_examples]],
   - The way to add an example is explained via the link : [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/inside_tests.html#inside_tests_add_integration]]
 
 * Week 1 Oct 2017
@@ -251,15 +251,13 @@ platform-faitures platform-properties task-priority maestro-set mc network-ns3 a
 - #189 : Energy consumption of parallel tasks.
 * Week 3 Nov 2017
 - Simgrid user's days - location : Le Bono.
-- the days were started by a general presentation of simgrid performed by Martin Quinson in monday 
-afternoon.
+- the days were started by a general presentation of simgrid performed by Martin Quinson in monday afternoon.
 - 2nd day, we had at the morning a presentation about tracing model performed by Arnaud.
 - energy-pstate is successfully converted to s4u API.
 - 3rd day, we had at the morngin a presentation about context switching performed by Martin.
-- New mission : test benchmark examples of mantevo, NERSC-8/ Trinity and CORAL-Benchmark with smpi and make testing report on issue report on github.
-[[https://asc.llnl.gov/CORAL-benchmarks/][CORAL-Benchmark]], [[http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/][trinity-nersc]], and [[https://mantevo.org/download/][mantevo]]
+- New mission : test benchmark examples of mantevo, NERSC-8/ Trinity and CORAL-Benchmark with smpi and make testing report on issue report on github. [[https://asc.llnl.gov/CORAL-benchmarks/][CORAL-Benchmark]], [[http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/][trinity-nersc]], and [[https://mantevo.org/download/][mantevo]]
 * Week 4 Nov 2017
-** Study benchmark examples (a list will be provide soon)
+** Study benchmark examples
 * Week 1 Dec 2017
 - Day off for the afternoon of monday.
 - Working on synchro-semaphore example.
