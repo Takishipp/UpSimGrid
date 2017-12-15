@@ -272,8 +272,12 @@ afternoon.
 - From Thursday until friday morning (now), Grid5000 is off of service.
 - Testing CORAL-benchmark (Bigsort, CORAL MPI-benchmarks, IO).
 - Day off for the morning of Thursday.
-** Friday meeting brefing :
-- 
+| Benchmark   | Lines of code | parallelism  | Language | Notes     |
+|-------------+---------------+--------------+----------+-----------|
+| [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/madness-20131025.tar.gz][MiniMADNESS]] | 10,000        | MPI & OPENMP | C++      | to delete |
+| [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/pynamic-1.3.tar.gz][pynamic]]     | 12,000        | MPI          | python   | to delete |
+|             |               |              |          |           |
+|             |               |              |          |           |
 ** Grid5000 Notes :
 - to see the rent jobs : oarstat -u 
 - the workline on grid5000 is the following : 
@@ -283,17 +287,6 @@ afternoon.
 3) Install an OS : kadeploy3 -f $OAR_NODE_FILE -e debian9-x64-nfs -k
 4) Connect to the node as root : ssh -l root parasilo-28.rennes.grid5000.fr
 5) apt-get update && apt-get install cmake make gcc git libboost-dev libgct++ libpcre3-dev linux-tools gdb liblua5.1-0-dev libdwarf-dev libunwind7-dev valgrind libsigc++
-* Notes about CORAL benchmak codes : 
-| Benchmark   | Lines of code | parallelism  | Language | Notes     |
-|-------------+---------------+--------------+----------+-----------|
-| [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/madness-20131025.tar.gz][MiniMADNESS]] | 10,000        | MPI & OPENMP | C++      | to delete |
-| [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/pynamic-1.3.tar.gz][pynamic]]     | 12,000        | MPI          | python   | to delete |
-| [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/HACC_IO.tar.gz][HACCIO]] | 2,000 | MPI | C++ | work but shows warrning |
-| [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/ALCF_MPI_Benchmark_v1.02.BGQ.tar.bz2][CORAL MPI Benchmarks]] | 1,000 | MPI | C | couldn't complie with gmake as it's indicated |
-| [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/ALCF_MPI_Benchmark_v1.02.BGQ.tar.bz2][IOR]] | 4,000 | MPI | C |  |
-|             |               |              |          |           |
-|             |               |              |          |           |
-|             |               |              |          |           |
 * Notes to convert msg models to s4u API : 
 apt-get update && apt-get install cmake make gcc git libboost-dev libsigc++ \
 cd simgrid/ \
