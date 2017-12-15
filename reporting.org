@@ -268,6 +268,7 @@ afternoon.
 - a grid500 tutorial, there is a library called EnOSLib that allowed to deploy an applications on grid'5000 : [[http://enoslib.readthedocs.io/en/latest/tutorials/grid5000.html]] 
 * Week 2 Dec 2017
 - Tring to build an org mode file that handle all the steps mentioned below.
+- Attend the conference about Sociotechnical Investigations of Scientific Software, Collaboration & Infrastructure. The conference was done on wednesday at 2pm.
 - From Thursday until friday morning (now), Grid5000 is off of service.
 - Testing CORAL-benchmark (Bigsort, CORAL MPI-benchmarks, IO).
 - Day off for the morning of Thursday.
