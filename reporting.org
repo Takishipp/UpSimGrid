@@ -274,6 +274,8 @@ platform-faitures platform-properties task-priority maestro-set mc network-ns3 a
 - Make a table for the benchmak codes with theirs status.
 - Learn about trampline to use emacs with grid5000.
 - Read the following report : [[https://github.com/mquinson/simgrid-simpar/blob/master/report.org][ssh_report]]
+- configure .ssh/config to make an automated connection to grid5000.
+- try to use ssh -x then ssh emacs to call emacs from the local machine.
 ** Grid5000 Notes :
 - to see the rent jobs : oarstat -u 
 - the workline on grid5000 is the following : 
@@ -299,10 +301,11 @@ Host *.g5k
   ProxyCommand ssh g5k -W "`basename %h .g5k`:%p"
   ForwardAgent no
 #+end_src
-    Accessing the frontend of my site (grenoble):
+Then the access to the frontend could be done through a terminal as following :
 #+begin_src sh
-  ssh grenoble.g5k
+  ssh [-X] grenoble.g5k
 #+end_src
+1) 
 * Notes about CORAL benchmak codes : 
 | Benchmark   | Lines of code | parallelism  | Language | Notes     |
 |-------------+---------------+--------------+----------+-----------|
