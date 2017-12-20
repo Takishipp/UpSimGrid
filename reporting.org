@@ -309,6 +309,12 @@ c) launch bash script to make a deployment
 #+begin_src sh
   ./dep.sh
 #+end_src
+where dep.sh : 
+#+begin_src sh
+  oarsub -I -l nodes=1,walltime=1:45 -t deploy
+  kadeploy3 -f $OAR_NODE_FILE -e debian9-x64-nfs -k
+#+end_src
+
 
 * Notes about CORAL benchmak codes : 
 | Benchmark   | Lines of code | parallelism  | Language | Notes     |
