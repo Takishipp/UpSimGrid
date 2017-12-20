@@ -332,100 +332,13 @@ where after-dep.sh has the following commands :
   make && make install
 #+end_src
 * Notes about CORAL benchmak codes : 
-| Benchmark   | Lines of code | parallelism  | Language | Notes     |
-|-------------+---------------+--------------+----------+-----------|
-| [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/madness-20131025.tar.gz][MiniMADNESS]] | 10,000        | MPI & OPENMP | C++      | to delete |
-| [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/pynamic-1.3.tar.gz][pynamic]]     | 12,000        | MPI          | python   | to delete |
-| [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/HACC_IO.tar.gz][HACCIO]] | 2,000 | MPI | C++ | work but shows warrning |
-| [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/ALCF_MPI_Benchmark_v1.02.BGQ.tar.bz2][CORAL MPI Benchmarks]] | 1,000 | MPI | C | couldn't complie with gmake as it's indicated |
-| [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/ALCF_MPI_Benchmark_v1.02.BGQ.tar.bz2][IOR]] | 4,000 | MPI | C |  |
+| Benchmark   | reference |Lines of code | parallelism  | Language | Notes     |
+|-------------+---------------+--------------+----------+----------+-----------|
+| [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/madness-20131025.tar.gz][MiniMADNESS]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/MADNESS_Summary_v1.pdf][ref]]  | 10,000        | MPI & OPENMP | C++      | depend to OPENMP cannot be useful for us |
+| [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/pynamic-1.3.tar.gz][pynamic]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/Pynamic_Summary_v1.0.pdf][ref]]  | 12,000        | MPI          | python   | code entirely in python contrary to description |
+| [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/HACC_IO.tar.gz][HACCIO]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/HACC_IO_Summary_v1.0.pdf][ref]] | 2,000 | MPI | C++ | work but shows warrnings |
+| [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/ALCF_MPI_Benchmark_v1.02.BGQ.tar.bz2][CORAL MPI Benchmarks]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/ALCF_MPI_Summary_v1.0.pdf][ref]] | 1,000 | MPI | C | couldn't be compiled with gmake as it's indicated |
+| [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/IOR.CORAL.1.tar.gz][IOR]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/IOR_Summary_v1.0.pdf][ref]] | 4,000 | MPI | C |  |
+| [[https://asc.llnl.gov/CORAL-benchmarks/Datacentric/KMI_HASH_CORAL.tar.gz][Hash]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/KMI_Summary_v1.1.pdf][ref]] | / | MPI | C |           |
 |             |               |              |          |           |
 |             |               |              |          |           |
-|             |               |              |          |           |
-* Notes to convert msg models to s4u API : 
-apt-get update && apt-get install cmake make gcc git libboost-dev libsigc++ \
-cd simgrid/ \
-cmake -Denable_compile_optimizations=ON -Denable_supernovae=OFF -Denable_compile_warnings=OFF -Denable_debug=OFF -Denable_gtnets=OFF -Denable_jedule=OFF -Denable_latency_bound_tracking=OFF -Denable_lua=OFF -Denable_model-checking=OFF -Denable_smpi=OFF -Denable_tracing=OFF -Denable_documentation=OFF .
-
-** task execute : 
-a task in msg turn to an actor in s4u.
-on msg : 
-#+BEGIN_SRC C
-  // Run a task
-  double workload = 100;
-  task1 = MSG_task_create ("t1", workload, 0, NULL);
-  MSG_task_execute (task1);
-  MSG_task_destroy(task1);
-    #+END_SRC
-on s4u : 
-    #+BEGIN_SRC C
-      simgrid::s4u::this_actor::execute(workload);
-    #+END_SRC
-** Host : 
-*** Little changes list: 
-#+BEGIN_SRC C
-     MSG_host_get_nb_pstates(host)
-  #+END_SRC
-on s4u : 
-  #+BEGIN_SRC C
-     sg_host_get_nb_pstates(host)
-  #+END_SRC
-*** Others :
-on msg 
-#+BEGIN_SRC C
-     MSG_host_get_speed(host);
-     MSG_host_get_power_peak_at(host, new_pstate);
-     MSG_host_by_name("MyHost2");
-  #+END_SRC
-on s4u : 
-  #+BEGIN_SRC C
-     host->getSpeed();
-     host->getPstateSpeed(new_pstate);
-     simgrid::s4u::Host::by_name_or_null("MyHost2");
-  #+END_SRC
-** Clock : 
-#+BEGIN_SRC C
-     MSG_host_get_nb_pstates(host)
-  #+END_SRC
-on s4u : 
-  #+BEGIN_SRC C
-     simgrid::s4u::Engine::getClock();
-  #+END_SRC
-* List of the remaining msg examples to convert to s4u API : 
-** actor (converted)
-- actor-create
-- actor-join 
-- actor-yield
-- actor-starkilltime
-** async : (converted) 
-- async-waitall 
-- async-waitany 
-- async-waitall 
-** could (cannot be converted yet) : 
-- cloud-simple
-- cloud-capping 
-- cloud-masterworker 
-- cloud-migration
-- cloud-two-tasks
-** energy :
-- energy-consumption (cannot be converted yet)
-- energy-onoff (converted)
-- energy-pstate (converted)
-- energy-pstack (not converted yet)
-- energy-vm (cannot be converted yet)
-- app-chainsend (cannot be converted yet)
-** Platform (not converted yet)
-- platform-faitures 
-- platform-properties 
-** trace (cannot be converted yet)
-- trace-categrories  
-- trace-host-user-variables
-- trace-link-user-variables
-- trace-masterworker
-- trace-platform 
-- trace-process-migration 
-- trace-route-user-variables 
-** others :
-- maestro-set 
-- mc
-- network-ns3

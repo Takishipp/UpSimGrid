@@ -1,0 +1,87 @@
+* Notes to convert msg models to s4u API : 
+apt-get update && apt-get install cmake make gcc git libboost-dev libsigc++ \
+cd simgrid/ \
+cmake -Denable_compile_optimizations=ON -Denable_supernovae=OFF -Denable_compile_warnings=OFF -Denable_debug=OFF -Denable_gtnets=OFF -Denable_jedule=OFF -Denable_latency_bound_tracking=OFF -Denable_lua=OFF -Denable_model-checking=OFF -Denable_smpi=OFF -Denable_tracing=OFF -Denable_documentation=OFF .
+
+** task execute : 
+a task in msg turn to an actor in s4u.
+on msg : 
+#+BEGIN_SRC C
+  // Run a task
+  double workload = 100;
+  task1 = MSG_task_create ("t1", workload, 0, NULL);
+  MSG_task_execute (task1);
+  MSG_task_destroy(task1);
+    #+END_SRC
+on s4u : 
+    #+BEGIN_SRC C
+      simgrid::s4u::this_actor::execute(workload);
+    #+END_SRC
+** Host : 
+*** Little changes list: 
+#+BEGIN_SRC C
+     MSG_host_get_nb_pstates(host)
+  #+END_SRC
+on s4u : 
+  #+BEGIN_SRC C
+     sg_host_get_nb_pstates(host)
+  #+END_SRC
+*** Others :
+on msg 
+#+BEGIN_SRC C
+     MSG_host_get_speed(host);
+     MSG_host_get_power_peak_at(host, new_pstate);
+     MSG_host_by_name("MyHost2");
+  #+END_SRC
+on s4u : 
+  #+BEGIN_SRC C
+     host->getSpeed();
+     host->getPstateSpeed(new_pstate);
+     simgrid::s4u::Host::by_name_or_null("MyHost2");
+  #+END_SRC
+** Clock : 
+#+BEGIN_SRC C
+     MSG_host_get_nb_pstates(host)
+  #+END_SRC
+on s4u : 
+  #+BEGIN_SRC C
+     simgrid::s4u::Engine::getClock();
+  #+END_SRC
+* List of the remaining msg examples to convert to s4u API : 
+** actor (converted)
+- actor-create
+- actor-join 
+- actor-yield
+- actor-starkilltime
+** async : (converted) 
+- async-waitall 
+- async-waitany 
+- async-waitall 
+** could (cannot be converted yet) : 
+- cloud-simple
+- cloud-capping 
+- cloud-masterworker 
+- cloud-migration
+- cloud-two-tasks
+** energy :
+- energy-consumption (cannot be converted yet)
+- energy-onoff (converted)
+- energy-pstate (converted)
+- energy-pstack (not converted yet)
+- energy-vm (cannot be converted yet)
+- app-chainsend (cannot be converted yet)
+** Platform (not converted yet)
+- platform-faitures 
+- platform-properties 
+** trace (cannot be converted yet)
+- trace-categrories  
+- trace-host-user-variables
+- trace-link-user-variables
+- trace-masterworker
+- trace-platform 
+- trace-process-migration 
+- trace-route-user-variables 
+** others :
+- maestro-set 
+- mc
+- network-ns3
