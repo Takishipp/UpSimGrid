@@ -301,11 +301,15 @@ Host *.g5k
   ProxyCommand ssh g5k -W "`basename %h .g5k`:%p"
   ForwardAgent no
 #+end_src
-Then the access to the frontend could be done through a terminal as following :
+b) then the access to the frontend could be done through a terminal as following :
 #+begin_src sh
   ssh [-X] grenoble.g5k
 #+end_src
-1) 
+c) launch bash script to make a deployment  
+#+begin_src sh
+  ./dep.sh
+#+end_src
+
 * Notes about CORAL benchmak codes : 
 | Benchmark   | Lines of code | parallelism  | Language | Notes     |
 |-------------+---------------+--------------+----------+-----------|
