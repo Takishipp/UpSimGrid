@@ -307,12 +307,38 @@ b) then the access to the frontend could be done through a terminal as following
 #+end_src
 c) launch bash script to make a deployment  
 #+begin_src sh
+  chmod +x dep.sh # for the first time.
   ./dep.sh
 #+end_src
 where dep.sh : 
 #+begin_src sh
   oarsub -I -l nodes=1,walltime=1:45 -t deploy
   kadeploy3 -f $OAR_NODE_FILE -e debian9-x64-nfs -k
+#+end_src
+ Visibly, kadeploy3 doesn't work through dep.sh
+d) After runing kadeploy3, launch bash script to download simgrid and install linux tools.
+#+begin_src sh
+  chmod +x after-dep.sh # for the first time.
+  ./after-dep.sh
+#+end_src
+where after-dep.sh has the following commands : 
+#+begin_src sh
+  mkdir Simgrid 
+  scp -r tboubehziz@rennes.grid5000.fr:~/simgrid/* Simgrid/
+  scp tboubehziz@rennes.grid5000.fr:~/.vimrc .
+  apt-get update && apt-get install cmake make gcc git libboost-dev libgct++ libpcre3-dev linux-tools gdb liblua5.1-0-dev libdwarf-dev libunwind7-dev valgrind libsigc++
+  cd Simgrid/
+  cmake -Denable_compile_optimizations=ON -Denable_supernovae=OFF -Denable_compile_warnings=OFF -Denable_debug=OFF -Denable_gtnets=OFF -Denable_jedule=OFF -Denable_latency_bound_tracking=OFF -Denable_lua=OFF -Denable_model-checking=OFF -Denable_smpi=OFF -Denable_tracing=OFF -Denable_documentation=OFF .
+  make && make install
+#+end_src
+
+
+
+
+
+  Get root access 
+#+begin_src sh
+  ssh root -l 'cat $OAR_NODE_FILE'
 #+end_src
 
 
