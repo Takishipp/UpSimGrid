@@ -325,23 +325,12 @@ where after-dep.sh has the following commands :
 #+begin_src sh
   mkdir Simgrid 
   scp -r tboubehziz@rennes.grid5000.fr:~/simgrid/* Simgrid/
-  scp tboubehziz@rennes.grid5000.fr:~/.vimrc .
+  ssh root -l 'cat $OAR_NODE_FILE'
   apt-get update && apt-get install cmake make gcc git libboost-dev libgct++ libpcre3-dev linux-tools gdb liblua5.1-0-dev libdwarf-dev libunwind7-dev valgrind libsigc++
   cd Simgrid/
   cmake -Denable_compile_optimizations=ON -Denable_supernovae=OFF -Denable_compile_warnings=OFF -Denable_debug=OFF -Denable_gtnets=OFF -Denable_jedule=OFF -Denable_latency_bound_tracking=OFF -Denable_lua=OFF -Denable_model-checking=OFF -Denable_smpi=OFF -Denable_tracing=OFF -Denable_documentation=OFF .
   make && make install
 #+end_src
-
-
-
-
-
-  Get root access 
-#+begin_src sh
-  ssh root -l 'cat $OAR_NODE_FILE'
-#+end_src
-
-
 * Notes about CORAL benchmak codes : 
 | Benchmark   | Lines of code | parallelism  | Language | Notes     |
 |-------------+---------------+--------------+----------+-----------|
