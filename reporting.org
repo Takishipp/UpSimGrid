@@ -337,8 +337,14 @@ where after-dep.sh has the following commands :
 | [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/madness-20131025.tar.gz][MiniMADNESS]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/MADNESS_Summary_v1.pdf][ref]]  | 10,000        | MPI & OPENMP | C++      | depend to OPENMP cannot be useful for us |
 | [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/pynamic-1.3.tar.gz][pynamic]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/Pynamic_Summary_v1.0.pdf][ref]]  | 12,000        | MPI          | python   | code entirely in python contrary to description |
 | [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/HACC_IO.tar.gz][HACCIO]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/HACC_IO_Summary_v1.0.pdf][ref]] | 2,000 | MPI | C++ | work but shows warrnings |
-| [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/ALCF_MPI_Benchmark_v1.02.BGQ.tar.bz2][CORAL MPI Benchmarks]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/ALCF_MPI_Summary_v1.0.pdf][ref]] | 1,000 | MPI | C | couldn't be compiled with gmake as it's indicated |
-| [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/IOR.CORAL.1.tar.gz][IOR]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/IOR_Summary_v1.0.pdf][ref]] | 4,000 | MPI | C |  |
-| [[https://asc.llnl.gov/CORAL-benchmarks/Datacentric/KMI_HASH_CORAL.tar.gz][Hash]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/KMI_Summary_v1.1.pdf][ref]] | / | MPI | C |           |
-|             |               |              |          |           |
-|             |               |              |          |           |
+| [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/ALCF_MPI_Benchmark_v1.02.BGQ.tar.bz2][ALCF MPI Benchmarks]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/ALCF_MPI_Summary_v1.0.pdf][ref]] | 1,000 | MPI | C | Some changes should be done to use mpicc instead of mpixlc_r |
+| [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/IOR.CORAL.1.tar.gz][IOR]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/IOR_Summary_v1.0.pdf][ref]] | 4,000 | MPI | C | Some modification should be applied to get this code work |
+| [[https://asc.llnl.gov/CORAL-benchmarks/Datacentric/KMI_HASH_CORAL.tar.gz][KMI_HASH]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/KMI_Summary_v1.1.pdf][ref]] | / | MPI | C | work but shows warnings |
+| [[https://asc.llnl.gov/CORAL-benchmarks/Datacentric/BigSort-20130808.tar.bz2][Integer sort]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/BigSort_Summary_v1.1.pdf][integer sort]] | 2,000 | MPI | C | Work but shows warnings |
+| [[https://asc.llnl.gov/CORAL-benchmarks/Throughput/namd-src.tar.gz][NAMD]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/NAMD_Summary_v1.0.pdf][ref]] | 180,000 | MPI | C | Some adjustment should be done in order to get it work |
+| [[https://asc.llnl.gov/CORAL-benchmarks/Throughput/mcb-20130723.tar.gz][mcb]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/MCB_Summary_v1.1.pdf][ref]] | 13,000 	 | MPI - OPENMP | C | Some adjustment should be done in order to use only MPI |
+|             |               |              |          |           |           |
+|             |               |              |          |           |           |
+|             |               |              |          |           |           |
+|             |               |              |          |           |           |
+|             |               |              |          |           |           |
