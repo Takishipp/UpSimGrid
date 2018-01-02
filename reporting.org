@@ -335,7 +335,7 @@ where after-dep.sh has the following commands :
 - Out of office.
 * Week 1 Jan 2017
 - Analyze CORAL benchmark codes.
-* Notes about CORAL benchmak codes : 
+* Notes about [[https://asc.llnl.gov/CORAL-benchmarks/][CORAL]] benchmak codes : 
 | Benchmark   | reference |Lines of code | parallelism  | Language | Notes     |
 |-------------+---------------+--------------+----------+----------+-----------|
 | [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/madness-20131025.tar.gz][MiniMADNESS]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/MADNESS_Summary_v1.pdf][ref]]  | 10,000        | MPI & OPENMP | C++      | depend on OPENMP cannot be useful for us |
@@ -352,3 +352,37 @@ where after-dep.sh has the following commands :
 | [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/HACC_IO.tar.gz][HACC_IO]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/HACC_IO_Summary_v1.0.pdf][ref]] | 35,000 | MPI | C++ | Work but shows warnings |
 | [[https://asc.llnl.gov/CORAL-benchmarks/Science/LSMS_3_rev237.tar.bz2][Lsms]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/LSMS_Summary_v1.1.pdf][ref]] | 200,000 | MPI, Lua, CBLAS | C++ | Depend on cBlasS |
 
+* Notes about [[http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/][trinity-nersc]] benchmak codes : 
+| Benchmark   | reference |Lines of code | parallelism  | Language | Notes     |
+|-------------+---------------+--------------+----------+----------+-----------|
+|             |               |              |          |          |           |
+|             |               |              |          |          |           |
+|             |               |              |          |          |           |
+|             |               |              |          |          |           |
+|             |               |              |          |          |           |
+|             |               |              |          |          |           |
+|             |               |              |          |          |           |
+|             |               |              |          |          |           |
+|             |               |              |          |          |           |
+|             |               |              |          |          |           |
+|             |               |              |          |          |           |
+|             |               |              |          |          |           |
+|             |               |              |          |          |           |
+
+
+* Notes about [[https://mantevo.org/download/][mantevo]] benchmak codes : 
+| Benchmark   | reference |Lines of code | parallelism  | Language | Notes     |
+|-------------+---------------+--------------+----------+----------+-----------|
+|             |               |              |          |          |           |
+|             |               |              |          |          |           |
+|             |               |              |          |          |           |
+|             |               |              |          |          |           |
+|             |               |              |          |          |           |
+|             |               |              |          |          |           |
+|             |               |              |          |          |           |
+|             |               |              |          |          |           |
+|             |               |              |          |          |           |
+|             |               |              |          |          |           |
+|             |               |              |          |          |           |
+|             |               |              |          |          |           |
+|             |               |              |          |          |           |
