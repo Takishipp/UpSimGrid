@@ -355,10 +355,10 @@ where after-dep.sh has the following commands :
 * Notes about [[http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/][trinity-nersc]] benchmak codes : 
 | Benchmark   | reference |Lines of code | parallelism  | Language | Notes     |
 |-------------+---------------+--------------+----------+----------+-----------|
-|             |               |              |          |          |           |
-|             |               |              |          |          |           |
-|             |               |              |          |          |           |
-|             |               |              |          |          |           |
+| [[http://www.nersc.gov/assets/Trinity--NERSC-8-RFP/Benchmarks/Feb22/MiniFE_ref_1.4b.tar][MiniFE]] | [[http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/minife/][ref]] | unknown | MPI | C++ | work but but need some adjustments |
+| [[http://www.nersc.gov/assets/Trinity--NERSC-8-RFP/Benchmarks/Feb22/MiniGhostv0.9.tar][MiniGhost]] | [[http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/minighost/][ref]] | unknown | MPI | Gfortran | need some adjustments |
+| [[http://www.nersc.gov/assets/Trinity--NERSC-8-RFP/Benchmarks/May31/TrN8GTCMay30.tar][GTC]] | [[http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/gtc/][ref]] | unknown | OPENMP | FORTRAN | Depend on OpenMP |
+| [[http://www.nersc.gov/assets/Trinity--NERSC-8-RFP/Benchmarks/July12/osu-micro-benchmarks-3.8-July12.tar][OMB_MPI Tests]] | [[http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/omb-mpi-tests/][ref]] | unknown | MPI | C | MPI work |
 |             |               |              |          |          |           |
 |             |               |              |          |          |           |
 |             |               |              |          |          |           |
