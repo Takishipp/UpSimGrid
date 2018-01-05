@@ -367,16 +367,5 @@ where after-dep.sh has the following commands :
 * Notes about [[https://mantevo.org/download/][mantevo]] benchmak codes : 
 | Benchmark   | reference |Lines of code | parallelism  | Language | Notes     |
 |-------------+---------------+--------------+----------+----------+-----------|
-|             |               |              |          |          |           |
-|             |               |              |          |          |           |
-|             |               |              |          |          |           |
-|             |               |              |          |          |           |
-|             |               |              |          |          |           |
-|             |               |              |          |          |           |
-|             |               |              |          |          |           |
-|             |               |              |          |          |           |
-|             |               |              |          |          |           |
-|             |               |              |          |          |           |
-|             |               |              |          |          |           |
-|             |               |              |          |          |           |
-|             |               |              |          |          |           |
+| [[http://mantevo.org/downloads/miniSMAC2D_2.0.html][MiniSMAC2D]] | NONE | unknown | MPI, OPENMP | FORTRAN | Some adjustment should be done to get build the code, although the code show errors and warnings |
+| [[http://mantevo.org/downloads/miniXyce_1.0.html][MiniXcye]] | NONE | unknown | MPI | C++ | Work but shows warnings |
