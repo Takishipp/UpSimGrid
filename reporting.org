@@ -342,8 +342,6 @@ where after-dep.sh has the following commands :
 | [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/HACC_IO.tar.gz][HACCIO]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/HACC_IO_Summary_v1.0.pdf][ref]] | 2,000 | MPI | C++ | work but shows warrnings | YES | |
 | [[https://asc.llnl.gov/CORAL-benchmarks/Datacentric/KMI_HASH_CORAL.tar.gz][KMI_HASH]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/KMI_Summary_v1.1.pdf][ref]] | / | MPI | C | work but shows warnings | YES | | 
 | [[https://asc.llnl.gov/CORAL-benchmarks/Datacentric/BigSort-20130808.tar.bz2][Integer sort]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/BigSort_Summary_v1.1.pdf][integer sort]] | 2,000 | MPI | C | Work but shows warnings | | | 
-| [[https://asc.llnl.gov/CORAL-benchmarks/Throughput/namd-src.tar.gz][NAMD]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/NAMD_Summary_v1.0.pdf][ref]] | 180,000 | MPI | C | Some adjustment should be done in order to get it work | | |
-| [[https://asc.llnl.gov/CORAL-benchmarks/Throughput/mcb-20130723.tar.gz][mcb]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/MCB_Summary_v1.1.pdf][ref]] | 13,000 	 | MPI - OPENMP | C | Some adjustment should be done in order to use only MPI | | |
 | [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/ALCF_MPI_Benchmark_v1.02.BGQ.tar.bz2][ALCF MPI Benchmarks]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/ALCF_MPI_Summary_v1.0.pdf][ref]] | 1,000 | MPI | C | Some changes should be done to use mpicc instead of mpixlc_r | | |
 
 * Notes about [[http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/][trinity-nersc]] benchmak codes : 
