@@ -341,7 +341,6 @@ where after-dep.sh has the following commands :
 | [[https://asc.llnl.gov/CORAL-benchmarks/Throughput/amg20130624.tgz][amg2013]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/AMG2013_Summary_v2.3.pdf][ref]] | 75,000 | MPI-OPENMP | C | Work with some adjustments | YES | |
 | [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/HACC_IO.tar.gz][HACCIO]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/HACC_IO_Summary_v1.0.pdf][ref]] | 2,000 | MPI | C++ | work but shows warrnings | YES | |
 | [[https://asc.llnl.gov/CORAL-benchmarks/Datacentric/KMI_HASH_CORAL.tar.gz][KMI_HASH]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/KMI_Summary_v1.1.pdf][ref]] | / | MPI | C | work but shows warnings | YES | | 
-| [[https://asc.llnl.gov/CORAL-benchmarks/Datacentric/BigSort-20130808.tar.bz2][Integer sort]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/BigSort_Summary_v1.1.pdf][ref]] | 2,000 | MPI | C | Work but shows warnings | | | 
 | [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/ALCF_MPI_Benchmark_v1.02.BGQ.tar.bz2][ALCF MPI Benchmarks]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/ALCF_MPI_Summary_v1.0.pdf][ref]] | 1,000 | MPI | C | Some changes should be done to use mpicc instead of mpixlc_r | | |
 
 * Notes about [[http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/][trinity-nersc]] benchmak codes : 
@@ -352,7 +351,7 @@ where after-dep.sh has the following commands :
 | [[http://www.nersc.gov/assets/Trinity--NERSC-8-RFP/Benchmarks/Jan9/ziatest.tar][ziatest]] | [[http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/ziatest/][ref]] | unknown | MPI | C | work well | YES 3 args are requested | |
 | [[http://www.nersc.gov/assets/Trinity--NERSC-8-RFP/Benchmarks/Mar29/mdtest-1.8.4.tar][mdtest]] | [[http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/mdtest/][ref]] | unknown | MPI | C | work well | YES | |
 | [[http://www.nersc.gov/assets/Trinity--NERSC-8-RFP/Benchmarks/July5/mpimemu-1.0-rc6July5.tar][mpimemu]] | [[http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/mpimemu/][ref]] | unknown | MPI | C | work well ./configure && make | YES | |
-| [[http://www.nersc.gov/assets/Trinity--NERSC-8-RFP/Benchmarks/July12/osu-micro-benchmarks-3.8-July12.tar][OMB_MPI Tests]] | [[http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/omb-mpi-tests/][ref]] | unknown | MPI | C | MPI work | | |
+| [[http://www.nersc.gov/assets/Trinity--NERSC-8-RFP/Benchmarks/July12/osu-micro-benchmarks-3.8-July12.tar][OMB_MPI Tests]] | [[http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/omb-mpi-tests/][ref]] | unknown | MPI | C | MPI work | YES | |
 | [[http://www.nersc.gov/assets/Trinity--NERSC-8-RFP/Benchmarks/Feb22/MiniFE_ref_1.4b.tar][MiniFE]] | [[http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/minife/][ref]] | unknown | MPI | C++ | work but need some adjustments | | |
 | [[http://www.nersc.gov/assets/Trinity--NERSC-8-RFP/Benchmarks/Feb22/MiniGhostv0.9.tar][MiniGhost]] | [[http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/minighost/][ref]] | unknown | MPI | Gfortran | need some adjustments | | |
 
@@ -360,4 +359,4 @@ where after-dep.sh has the following commands :
 | Benchmark   | reference |Lines of code | parallelism  | Language | Notes     | Runing on MPI | Runing on SMPI |
 |-------------+---------------+--------------+----------+----------+-----------+---------------+----------------|
 | [[http://mantevo.org/downloads/miniXyce_1.0.html][MiniXcye]] | NONE | unknown | MPI | C++ | Work but shows warnings | YES | |
-| [[http://mantevo.org/downloads/miniSMAC2D_2.0.html][MiniSMAC2D]] | NONE | unknown | MPI, OPENMP | FORTRAN | Some adjustment should be done to get build the code, although the code show errors and warnings | | |
+| [[http://mantevo.org/downloads/miniSMAC2D_2.0.html][MiniSMAC2D]] | NONE | unknown | MPI, OPENMP | FORTRAN | Some adjustment should be done to get build the code, although the code show errors and warnings | YES but the localization of input file should be changed | |
