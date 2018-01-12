@@ -212,8 +212,8 @@
   - Follow the lasts change on github "memory leak is in the lowest level ever".
   - Debug s4u-wait.
 ** Notes : 
-  - The manual of MSG could be found via the following link : [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/group__msg__examples.html]], 
-  - The manual of S4U could be found via the following link : [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/group__s4u__examples.html]],
+  - The manual of MSG could be found via the following link : [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/group__msg__examples.html][msg_examples]], 
+  - The manual of S4U could be found via the following link : [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/group__s4u__examples.html][s4u_examples]],
   - The way to add an example is explained via the link : [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/inside_tests.html#inside_tests_add_integration]]
 
 * Week 1 Oct 2017
@@ -251,15 +251,13 @@ platform-faitures platform-properties task-priority maestro-set mc network-ns3 a
 - #189 : Energy consumption of parallel tasks.
 * Week 3 Nov 2017
 - Simgrid user's days - location : Le Bono.
-- the days were started by a general presentation of simgrid performed by Martin Quinson in monday 
-afternoon.
+- the days were started by a general presentation of simgrid performed by Martin Quinson in monday afternoon.
 - 2nd day, we had at the morning a presentation about tracing model performed by Arnaud.
 - energy-pstate is successfully converted to s4u API.
 - 3rd day, we had at the morngin a presentation about context switching performed by Martin.
-- New mission : test benchmark examples of mantevo, NERSC-8/ Trinity and CORAL-Benchmark with smpi and make testing report on issue report on github.
-[[https://asc.llnl.gov/CORAL-benchmarks/]], [[http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/]], and [[https://mantevo.org/download/]]
+- New mission : test benchmark examples of mantevo, NERSC-8/ Trinity and CORAL-Benchmark with smpi and make testing report on issue report on github. [[https://asc.llnl.gov/CORAL-benchmarks/][CORAL-Benchmark]], [[http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/][trinity-nersc]], and [[https://mantevo.org/download/][mantevo]]
 * Week 4 Nov 2017
-** Study benchmark examples (a list will be provide soon)
+** Study benchmark examples
 * Week 1 Dec 2017
 - Day off for the afternoon of monday.
 - Working on synchro-semaphore example.
@@ -272,12 +270,12 @@ afternoon.
 - From Thursday until friday morning (now), Grid5000 is off of service.
 - Testing CORAL-benchmark (Bigsort, CORAL MPI-benchmarks, IO).
 - Day off for the morning of Thursday.
-| Benchmark   | Lines of code | parallelism  | Language | Notes     |
-|-------------+---------------+--------------+----------+-----------|
-| [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/madness-20131025.tar.gz][MiniMADNESS]] | 10,000        | MPI & OPENMP | C++      | to delete |
-| [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/pynamic-1.3.tar.gz][pynamic]]     | 12,000        | MPI          | python   | to delete |
-|             |               |              |          |           |
-|             |               |              |          |           |
+** Friday meeting brefing :
+- Make a table for the benchmak codes with theirs status.
+- Learn about trampline to use emacs with grid5000.
+- Read the following report : [[https://github.com/mquinson/simgrid-simpar/blob/master/report.org][ssh_report]]
+- configure .ssh/config to make an automated connection to grid5000.
+- try to use ssh -x then ssh emacs to call emacs from the local machine.
 ** Grid5000 Notes :
 - to see the rent jobs : oarstat -u 
 - the workline on grid5000 is the following : 
@@ -287,90 +285,76 @@ afternoon.
 3) Install an OS : kadeploy3 -f $OAR_NODE_FILE -e debian9-x64-nfs -k
 4) Connect to the node as root : ssh -l root parasilo-28.rennes.grid5000.fr
 5) apt-get update && apt-get install cmake make gcc git libboost-dev libgct++ libpcre3-dev linux-tools gdb liblua5.1-0-dev libdwarf-dev libunwind7-dev valgrind libsigc++
-* Notes to convert msg models to s4u API : 
-apt-get update && apt-get install cmake make gcc git libboost-dev libsigc++ \
-cd simgrid/ \
-cmake -Denable_compile_optimizations=ON -Denable_supernovae=OFF -Denable_compile_warnings=OFF -Denable_debug=OFF -Denable_gtnets=OFF -Denable_jedule=OFF -Denable_latency_bound_tracking=OFF -Denable_lua=OFF -Denable_model-checking=OFF -Denable_smpi=OFF -Denable_tracing=OFF -Denable_documentation=OFF .
+* Week 3 Dec 2017
+** Notes : 
+0) configure .ssh/config file to allowed the connection to grid5000 automatically.
+a) 
+#+begin_src sh
+# Alias for the gateway (not really needed, but convenient)
+Host g5k
+  User g5k_login
+  Hostname access.grid5000.fr
+  ForwardAgent no
+# Automatic connection to hosts within Grid'5000, and not reachable direction on SSH tcp port 22
+Host *.g5k
+  User g5k_login
+  ProxyCommand ssh g5k -W "`basename %h .g5k`:%p"
+  ForwardAgent no
+#+end_src
+b) then the access to the frontend could be done through a terminal as following :
+#+begin_src sh
+  ssh [-X] grenoble.g5k
+#+end_src
+c) launch bash script to make a deployment  
+#+begin_src sh
+  chmod +x dep.sh # for the first time.
+  ./dep.sh
+#+end_src
+where dep.sh : 
+#+begin_src sh
+  oarsub -I -l nodes=1,walltime=1:45 -t deploy
+  kadeploy3 -f $OAR_NODE_FILE -e debian9-x64-nfs -k
+#+end_src
+ Visibly, kadeploy3 doesn't work through dep.sh
+d) After runing kadeploy3, launch bash script to download simgrid and install linux tools.
+#+begin_src sh
+  chmod +x after-dep.sh # for the first time.
+  ./after-dep.sh
+#+end_src
+where after-dep.sh has the following commands : 
+#+begin_src sh
+  mkdir Simgrid 
+  scp -r tboubehziz@rennes.grid5000.fr:~/simgrid/* Simgrid/
+  ssh root -l 'cat $OAR_NODE_FILE'
+  apt-get update && apt-get install cmake make gcc git libboost-dev libgct++ libpcre3-dev linux-tools gdb liblua5.1-0-dev libdwarf-dev libunwind7-dev valgrind libsigc++
+  cd Simgrid/
+  cmake -Denable_compile_optimizations=ON -Denable_supernovae=OFF -Denable_compile_warnings=OFF -Denable_debug=OFF -Denable_gtnets=OFF -Denable_jedule=OFF -Denable_latency_bound_tracking=OFF -Denable_lua=OFF -Denable_model-checking=OFF -Denable_smpi=OFF -Denable_tracing=OFF -Denable_documentation=OFF .
+  make && make install
+#+end_src
+* Week 4 Dec 2017
+- Out of office.
+* Week 1-2 Jan 2017
+- Analyze benchmark codes.
+- The selection of benchmark codes and the tests for MPI is done.
+* Notes about [[https://asc.llnl.gov/CORAL-benchmarks/][CORAL]] benchmak codes : 
+| Benchmark   | reference |Lines of code | parallelism  | Lang | Notes     | on MPI | on SMPI |
+|-------------+---------------+--------------+----------+----------+-----------+---------------+----------------|
+| [[https://asc.llnl.gov/CORAL-benchmarks/Throughput/amg20130624.tgz][amg2013]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/AMG2013_Summary_v2.3.pdf][ref]] | 75,000 | MPI-OPENMP | C | Work with some adjustments | YES | |
+| [[https://asc.llnl.gov/CORAL-benchmarks/Skeleton/HACC_IO.tar.gz][HACCIO]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/HACC_IO_Summary_v1.0.pdf][ref]] | 2,000 | MPI | C++ | work but shows warrnings | YES | |
+| [[https://asc.llnl.gov/CORAL-benchmarks/Datacentric/KMI_HASH_CORAL.tar.gz][KMI_HASH]] | [[https://asc.llnl.gov/CORAL-benchmarks/Summaries/KMI_Summary_v1.1.pdf][ref]] | / | MPI | C | work but shows warnings | YES | | 
 
-** task execute : 
-a task in msg turn to an actor in s4u.
-on msg : 
-#+BEGIN_SRC C
-  // Run a task
-  double workload = 100;
-  task1 = MSG_task_create ("t1", workload, 0, NULL);
-  MSG_task_execute (task1);
-  MSG_task_destroy(task1);
-    #+END_SRC
-on s4u : 
-    #+BEGIN_SRC C
-      simgrid::s4u::this_actor::execute(workload);
-    #+END_SRC
-** Host : 
-*** Little changes list: 
-#+BEGIN_SRC C
-     MSG_host_get_nb_pstates(host)
-  #+END_SRC
-on s4u : 
-  #+BEGIN_SRC C
-     sg_host_get_nb_pstates(host)
-  #+END_SRC
-*** Others :
-on msg 
-#+BEGIN_SRC C
-     MSG_host_get_speed(host);
-     MSG_host_get_power_peak_at(host, new_pstate);
-     MSG_host_by_name("MyHost2");
-  #+END_SRC
-on s4u : 
-  #+BEGIN_SRC C
-     host->getSpeed();
-     host->getPstateSpeed(new_pstate);
-     simgrid::s4u::Host::by_name_or_null("MyHost2");
-  #+END_SRC
-** Clock : 
-#+BEGIN_SRC C
-     MSG_host_get_nb_pstates(host)
-  #+END_SRC
-on s4u : 
-  #+BEGIN_SRC C
-     simgrid::s4u::Engine::getClock();
-  #+END_SRC
-* List of the remaining msg examples to convert to s4u API : 
-** actor (converted)
-- actor-create
-- actor-join 
-- actor-yield
-- actor-starkilltime
-** async : (converted) 
-- async-waitall 
-- async-waitany 
-- async-waitall 
-** could (cannot be converted yet) : 
-- cloud-simple
-- cloud-capping 
-- cloud-masterworker 
-- cloud-migration
-- cloud-two-tasks
-** energy :
-- energy-consumption (cannot be converted yet)
-- energy-onoff (converted)
-- energy-pstate (converted)
-- energy-pstack (not converted yet)
-- energy-vm (cannot be converted yet)
-- app-chainsend (cannot be converted yet)
-** Platform (not converted yet)
-- platform-faitures 
-- platform-properties 
-** trace (cannot be converted yet)
-- trace-categrories  
-- trace-host-user-variables
-- trace-link-user-variables
-- trace-masterworker
-- trace-platform 
-- trace-process-migration 
-- trace-route-user-variables 
-** others :
-- maestro-set 
-- mc
-- network-ns3
+* Notes about [[http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/][trinity-nersc]] benchmak codes : 
+| Benchmark     | reference | Lines of code | parallelism | Lang | Notes                         | on MPI                   | on SMPI | about SMPI test                                                  |
+|---------------+-----------+---------------+-------------+------+-------------------------------+--------------------------+---------+------------------------------------------------------------------|
+| [[http://www.nersc.gov/assets/Trinity--NERSC-8-RFP/Benchmarks/Jan9/smb1.0-1.tar][SMB]]           | [[http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/smb/][ref]]       | unknown       | MPI         | C    | work well                     | YES                      | YES     | slow                                                             |
+| [[http://www.nersc.gov/assets/Trinity--NERSC-8-RFP/Benchmarks/June28/psnap-1.2June28.tar][psnap]]         | [[http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/psnap/][ref]]       | unknown       | MPI         | C    | work well                     | YES                      | YES     | slow                                                             |
+| [[http://www.nersc.gov/assets/Trinity--NERSC-8-RFP/Benchmarks/Jan9/ziatest.tar][ziatest]]       | [[http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/ziatest/][ref]]       | unknown       | MPI         | C    | work well                     | YES 3 args are requested | NO      | it's required by MPI-2, this is currently not supported by SMPI. |
+| [[http://www.nersc.gov/assets/Trinity--NERSC-8-RFP/Benchmarks/Mar29/mdtest-1.8.4.tar][mdtest]]        | [[http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/mdtest/][ref]]       | unknown       | MPI         | C    | work well                     | YES                      | No      | deadlock                                                         |
+| [[http://www.nersc.gov/assets/Trinity--NERSC-8-RFP/Benchmarks/July5/mpimemu-1.0-rc6July5.tar][mpimemu]]       | [[http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/mpimemu/][ref]]       | unknown       | MPI         | C    | work well ./configure && make | YES                      |         |                                                                  |
+| [[http://www.nersc.gov/assets/Trinity--NERSC-8-RFP/Benchmarks/July12/osu-micro-benchmarks-3.8-July12.tar][OMB_MPI Tests]] | [[http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/omb-mpi-tests/][ref]]       | unknown       | MPI         | C    | MPI work                      | YES                      |         |                                                                  |
+
+* Notes about [[https://mantevo.org/download/][mantevo]] benchmak codes : 
+| Benchmark   | reference |Lines of code | parallelism  | Lang | Notes     | on MPI | on SMPI |
+|-------------+---------------+--------------+----------+----------+-----------+---------------+----------------|
+| [[http://mantevo.org/downloads/miniXyce_1.0.html][MiniXcye]] | NONE | unknown | MPI | C++ | Work but shows warnings | YES | |
+| [[http://mantevo.org/downloads/miniSMAC2D_2.0.html][MiniSMAC2D]] | NONE | unknown | MPI, OPENMP | FORTRAN | Some adjustment should be done to get build the code, although the code show errors and warnings | YES but the localization of input file should be changed | |
