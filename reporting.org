@@ -340,3 +340,4 @@ where after-dep.sh has the following commands :
 - Test and run the selected benchmark for SMPI.
 - Creat a new repository called [[https://github.com/Takishipp/SMPI-benchmarks][SMPI-benchmarks]] that contain un org mode file. Through this latter one can launch the download of each benchmark and make the necessary changes that allow to run it with smpi.
 - The [[https://github.com/Takishipp/SMPI-benchmarks/blob/master/main.org][org mode file]] contain also an organized table for all the candidate benchmark codes with a brief description.
+- Half-day off for the afternoon of thursday.
