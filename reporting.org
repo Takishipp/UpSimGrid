@@ -342,8 +342,8 @@ where after-dep.sh has the following commands :
 - The [[https://github.com/Takishipp/SMPI-benchmarks/blob/master/main.org][org mode file]] contain also an organized table for all the candidate benchmark codes with a brief description.
 - Half-day off for the afternoon of thursday.
 * Week 4 Jan 2017
-- Complete the homogeneization of the SMPI_benchmark scripts.
+- Complete the homogeneization of the [[https://github.com/Takishipp/SMPI-benchmarks][SMPI-benchmarks]] scripts.
 - Test and add more of examples from the [[https://repository.prace-ri.eu/git/PRACE/CodeVault][CodeVault]] platform.
 - Test Luca's [[https://github.com/simgrid/simgrid/issues/252][script]] that allow to determine the list of the unimplimented MPI's functions on SimGrid.
-- Add a description and a README.org to SMPI_benchmark repository on github.
+- Add a description and a README.org to [[https://github.com/Takishipp/SMPI-benchmarks][SMPI-benchmarks]] repository on github.
 - Include a table of code to the README.
