@@ -333,17 +333,37 @@ where after-dep.sh has the following commands :
 #+end_src
 * Week 4 Dec 2017
 - Out of office.
-* Week 1-2 Jan 2017
+* Week 1-2 Jan 2018
 - Analyze benchmark codes and select the ones who could be run only with MPI.
 - Test and run the selected benchmark for MPI.
-* Week 3 Jan 2017
+* Week 3 Jan 2018
 - Test and run the selected benchmark for SMPI.
 - Creat a new repository called [[https://github.com/Takishipp/SMPI-benchmarks][SMPI-benchmarks]] that contain un org mode file. Through this latter one can launch the download of each benchmark and make the necessary changes that allow to run it with smpi.
 - The [[https://github.com/Takishipp/SMPI-benchmarks/blob/master/main.org][org mode file]] contain also an organized table for all the candidate benchmark codes with a brief description.
 - Half-day off for the afternoon of thursday.
-* Week 4 Jan 2017
+* Week 4 Jan 2018
 - Complete the homogeneization of the [[https://github.com/Takishipp/SMPI-benchmarks][SMPI-benchmarks]] scripts.
 - Test and add more of examples from the [[https://repository.prace-ri.eu/git/PRACE/CodeVault][CodeVault]] platform.
 - Test Luca's [[https://github.com/simgrid/simgrid/issues/252][script]] that allow to determine the list of the unimplimented MPI's functions on SimGrid.
 - Add a description and a README.org to [[https://github.com/Takishipp/SMPI-benchmarks][SMPI-benchmarks]] repository on github.
 - Include a table of code to the README.
+* Week 1 Feb 2018
+- Add legend to README to give meaning to symboles.
+- In the ref raw, the link to the compilation take the symbole of compilation instructions.
+- The link to the code turn to a glyph package.
+- The list of the unconsidered benchmarks.
+TODO
+  - smpicheckcompat: script à ajouter à SimGrid à coté de smpirun
+    - Version0: qui marche sur ta machine (seulement)
+    - Version1: qui utilise CMAKE_HOME_DIRECTORY pour retrouver la
+      racine des sources de simgrid
+    - Version2: qui extrait la liste des fonctions utilisables lors de
+      la compilation (de la création du script) pour marcher même si
+      les sources de simgrid sont supprimées du disque
+  - Automatiser l'exécution des tests, afin de permettre le debug
+    - Ajouter un job dans jenkins "smpi-benchmarks" qui relance tout
+      chaque nuit
+    - Pour l'instant, on veut un truc simple, où jenkins voit les
+      tests comme un seul grand blurb, sans le détail des tests
+    - Un jour peut-être, on voudra que chaque bench soit vu comme un
+      test unitaire de SMPI
