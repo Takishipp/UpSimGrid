@@ -352,6 +352,9 @@ where after-dep.sh has the following commands :
 - In the ref raw, the link to the compilation take the symbole of compilation instructions.
 - The link to the code turn to a glyph package.
 - The list of the unconsidered benchmarks.
+- install jenkins [[https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+on+Ubuntu][:book:]]. The passework is reachable through "sudo vi .jenkins/secrets/initialAdminPassword".
+- Add a new SMPI-Benchmarks job to jenkins that will be checked everyday.
+
 TODO
   - smpicheckcompat: script à ajouter à SimGrid à coté de smpirun
     - Version0: qui marche sur ta machine (seulement)
@@ -360,10 +363,3 @@ TODO
     - Version2: qui extrait la liste des fonctions utilisables lors de
       la compilation (de la création du script) pour marcher même si
       les sources de simgrid sont supprimées du disque
-  - Automatiser l'exécution des tests, afin de permettre le debug
-    - Ajouter un job dans jenkins "smpi-benchmarks" qui relance tout
-      chaque nuit
-    - Pour l'instant, on veut un truc simple, où jenkins voit les
-      tests comme un seul grand blurb, sans le détail des tests
-    - Un jour peut-être, on voudra que chaque bench soit vu comme un
-      test unitaire de SMPI
