@@ -352,14 +352,18 @@ where after-dep.sh has the following commands :
 - In the ref raw, the link to the compilation take the symbole of compilation instructions.
 - The link to the code turn to a glyph package.
 - The list of the unconsidered benchmarks.
-- install jenkins [[https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+on+Ubuntu][:book:]]. The passework is reachable through "sudo vi .jenkins/secrets/initialAdminPassword".
+- install jenkins [[https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+on+Ubuntu][:book:]]. 
+http://localhost:8080.
+The passework is reachable through "sudo vi .jenkins/secrets/initialAdminPassword".
 - Add a new SMPI-Benchmarks job to jenkins that will be checked everyday.
-
-TODO
-  - smpicheckcompat: script à ajouter à SimGrid à coté de smpirun
-    - Version0: qui marche sur ta machine (seulement)
-    - Version1: qui utilise CMAKE_HOME_DIRECTORY pour retrouver la
-      racine des sources de simgrid
-    - Version2: qui extrait la liste des fonctions utilisables lors de
-      la compilation (de la création du script) pour marcher même si
-      les sources de simgrid sont supprimées du disque
+* Week 2-3 Feb 2018
+- Check the list called "à Revoir" and add the apps that work to the list of SMPI-proxy-apps.
+- Add MiniFE of Trinity-Nersc - MPI version.
+- Make an array that contains the apps that couldn't be used with their dependency issues.
+- To know how launch scripts from org file mode.
+   - [[https://orgmode.org/manual/Extracting-source-code.html#Extracting-source-code][Extracting source code]]
+   - [[https://emacs.stackexchange.com/questions/27126/is-it-possible-to-org-bable-tangle-an-org-file-from-the-command-line][how org bable tangle an org file from the command line]]
+   - [[https://stackoverflow.com/questions/46295511/how-to-run-org-mode-commands-from-shell][How to run org mode commands from shell]]
+* Week 4 Fab 2018
+- Trying to correct apps on jenkins and make some improvments on [[https://github.com/simgrid/SMPI-proxy-apps][SMPI-proxy-apps]] repository.
+  - ajouter http://proxyapps.exascaleproject.org/ecp-suite/
