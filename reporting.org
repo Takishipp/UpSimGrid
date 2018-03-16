@@ -366,4 +366,8 @@ The passework is reachable through "sudo vi .jenkins/secrets/initialAdminPasswor
    - [[https://stackoverflow.com/questions/46295511/how-to-run-org-mode-commands-from-shell][How to run org mode commands from shell]]
 * Week 4 Fab 2018
 - Trying to correct apps on jenkins and make some improvments on [[https://github.com/simgrid/SMPI-proxy-apps][SMPI-proxy-apps]] repository.
-  - ajouter http://proxyapps.exascaleproject.org/ecp-suite/
+  - Add http://proxyapps.exascaleproject.org/ecp-suite/ tests
+* Week 1-2 Mar 2018
+- Make some test running with smpi and correct theirs issues.
+- Adjust Readme.
+
