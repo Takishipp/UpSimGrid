@@ -370,4 +370,8 @@ The passework is reachable through "sudo vi .jenkins/secrets/initialAdminPasswor
 * Week 1-2 Mar 2018
 - Make some test running with smpi and correct theirs issues.
 - Adjust Readme.
-
+* Week 3-4 Mar 2018
+- Add MiniDFT and MILC to jenkins test list.
+- Make some cosmetics and delete useless columns from the readme and solt apps by family
+- try to get work some disabled apps (UPC-FC, Miniaero, SWFFT, MACSio) that require dependecies.
+- Open 3 bug issue on github and add a beetle emoji on readme file beside the specific app.
