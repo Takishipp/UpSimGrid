@@ -375,3 +375,38 @@ The passework is reachable through "sudo vi .jenkins/secrets/initialAdminPasswor
 - Make some cosmetics and delete useless columns from the readme and solt apps by family
 - try to get work some disabled apps (UPC-FC, Miniaero, SWFFT, MACSio) that require dependecies.
 - Open 3 bug issue on github and add a beetle emoji on readme file beside the specific app.
+- Update the status of jenkins tests on the readme.
+* Week 1 Apr 2018 
+  - Reduce execution time.
+  - Manque des apps qui compilent pas en local: MiniAero, MACSio,
+  - Voir si SWFFT a besoin de FFTW3 avec ou sans MPI
+  - Continuer à ouvrir des bugs, et faire des liens
+
+* Week 3-4 Apr 2018
+- Move apps to ECP.
+- Remove MPI columns.
+- Use Patchs instead of cp.
+- Lister les patchs sur la page de garde, avec un lien clicable
+- Afficher l'image sur la page principale :
+  - https://ci.inria.fr/simgrid/job/SMPI-proxy-apps/test/trend
+* Week 1 May 2018 
+- Use Patchs and make some adjustments.
+* Week 2-4 May 2018 
+Out of office.
+* Week 5 May 2018 
+- Reading [[https://www.geosci-model-dev-discuss.net/gmd-2017-301/gmd-2017-301.pdf][Simulation of the Performance and Scalability of MPi Communications of Atmospheric Models running on Exascale Supercomputers]] article.
+** Notice about comments of Meteo france paper : 
+- SST/macro provides the best cost/accuracy trade-off simulation for large-scale disctributed applications.
+- Congestion factor, SST/macro has three network models : the analytical model transfers, the packet-level model PISCES, and the flow-level model.
+- Compared to the SimGrid simulator, the packet-level model of SST/macro produces almost indentical results.
+- SST/macro online simulation is very similar to the TraceR simulation.
+- SST/macro provides several topologies of the interconnect network.
+- SST/macro can reduce the memory footpring per node, its parallel efficiency degrades if more cores are used.
+- They modified SST/macro to create a gloval v ariable and attach the shared memory to this global variable. (p11)
+- Large-scale application needs a large amount of memory for computation. A large amount of memory for the message buffers is usually required for MPI communications.
+SST/macro can operate with null buffers, the message buffer is set to null in the skeleton application, which significantly reduces the size of memroy required by the simulation of communication. (p11)
+- SST/macro cannot simulate the burst algorithm for more than 2X10⁴ MPI processes because the burst messages result in huge events and large memory footprint(p19).
+- The skeleton programs, scripts, and the modified version of SST/marco 7.1.0 for the simulations presented the paper are available at [[https://zenodo.org/record/1066934#.Ww0vSByxU5k][modified_SST/macro]]
+** Notice about simgrid website : 
+- Home page should write simgrid home page .
+- The title is so big.
