@@ -397,16 +397,19 @@ Out of office.
 - Reading [[https://www.geosci-model-dev-discuss.net/gmd-2017-301/gmd-2017-301.pdf][Simulation of the Performance and Scalability of MPi Communications of Atmospheric Models running on Exascale Supercomputers]] article.
 ** Notice about comments of Meteo france paper : 
 - SST/macro provides the best cost/accuracy trade-off simulation for large-scale disctributed applications.
-- Congestion factor, SST/macro has three network models : the analytical model transfers, the packet-level model PISCES, and the flow-level model.
+- SST/macro has three network models : the analytical model transfers, the packet-level model PISCES, and the flow-level model.
 - Compared to the SimGrid simulator, the packet-level model of SST/macro produces almost indentical results.
 - SST/macro online simulation is very similar to the TraceR simulation.
 - SST/macro provides several topologies of the interconnect network.
 - SST/macro can reduce the memory footpring per node, its parallel efficiency degrades if more cores are used.
-- They modified SST/macro to create a gloval v ariable and attach the shared memory to this global variable. (p11)
 - Large-scale application needs a large amount of memory for computation. A large amount of memory for the message buffers is usually required for MPI communications.
 SST/macro can operate with null buffers, the message buffer is set to null in the skeleton application, which significantly reduces the size of memroy required by the simulation of communication. (p11)
 - SST/macro cannot simulate the burst algorithm for more than 2X10⁴ MPI processes because the burst messages result in huge events and large memory footprint(p19).
+- They modified SST/macro to create a gloval variable and attach the shared memory to this global variable. (p11)
 - The skeleton programs, scripts, and the modified version of SST/marco 7.1.0 for the simulations presented the paper are available at [[https://zenodo.org/record/1066934#.Ww0vSByxU5k][modified_SST/macro]]
 ** Notice about simgrid website : 
 - Home page should write simgrid home page .
 - The title is so big.
+* Week 1 june
+- Time Management Training (4-5 june).
+- Newcomers seminar in Paris (6-8 june).
