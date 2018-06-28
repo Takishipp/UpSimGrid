@@ -415,6 +415,11 @@ SST/macro can operate with null buffers, the message buffer is set to null in th
 - Newcomers seminar in Paris (6-8 june).
 * Week 2 June
 - Fix mpimemu execution issue with the help of the author.
-- Work on meteoFrance test codes (one of the 3 tests is pushed on SMPI repository), but for the other according to the author, It couldn't be done without using shared memory.
+- Work on MeteoFrance test codes (one of the 3 tests is pushed on SMPI repository), but for the other according to the author, It couldn't be done without using shared memory.
 * Week 3 June 
 - Read [[https://hal.inria.fr/hal-01544827/document][Capacity planning ofSupercomputers : Simulating MPI applications at scale]] paper.
+- Tried to turn MeteoFrance test codes.
+* Week 4 June
+- Fix MeteoFrance test codes with the help of Degomme.
+- Tried to turn these tests on grid5000.
+ 
