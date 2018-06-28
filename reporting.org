@@ -418,8 +418,9 @@ SST/macro can operate with null buffers, the message buffer is set to null in th
 - Work on MeteoFrance test codes (one of the 3 tests is pushed on SMPI repository), but for the other according to the author, It couldn't be done without using shared memory.
 * Week 3 June 
 - Read [[https://hal.inria.fr/hal-01544827/document][Capacity planning ofSupercomputers : Simulating MPI applications at scale]] paper.
-- Tried to turn MeteoFrance test codes.
+- Tried to turn MeteoFrance test codes by replace malloc/free by SMPI_SHARED_MALLOC/SMPI_SHARED_FREE.
+- Team meeting (wednesday 4pm-5:15pm). 
 * Week 4 June
-- Fix MeteoFrance test codes with the help of Degomme.
+- Fix MeteoFrance test codes with the help of C.Degomme.
 - Tried to turn these tests on grid5000.
- 
+- Training (Friday).
