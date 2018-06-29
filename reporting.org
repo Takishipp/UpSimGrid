@@ -422,5 +422,6 @@ SST/macro can operate with null buffers, the message buffer is set to null in th
 - Team meeting (wednesday 4pm-5:15pm). 
 * Week 4 June
 - Fix MeteoFrance test codes with the help of C.Degomme.
+- Connection issue prevents me to connect on grid5000 (persmission denied).
 - Tried to turn these tests on grid5000.
-- Training (Friday).
+- Training Unity-3D (Friday 9:30am - 6:30pm).
