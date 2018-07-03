@@ -425,3 +425,5 @@ SST/macro can operate with null buffers, the message buffer is set to null in th
 - Connection issue prevents me to connect on grid5000 (persmission denied).
 - Tried to turn these tests on grid5000.
 - Training Unity-3D (Friday 9:30am - 6:30pm).
+* Week 1 July
+- Update the links that point out on github repositories.
