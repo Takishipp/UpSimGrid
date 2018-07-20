@@ -85,3 +85,11 @@ on s4u :
 - maestro-set 
 - mc
 - network-ns3
+* Setting emacs with org-mode : 
+1- First thing to do, is to use M-x list-package -> Enter -> search of org packages I/U for Install/Uninstall -> x to confirm.
+2- Edit/Create init.el at ~/.emacs.d/ directory, (see enclosed init.el file). 
+3- In the cas, where the following errors appears : 
+"Evaluation of this emacs-lisp code-blockis disabled".
+On Emacs 25.2 (9.0) and using org-plus-contrib:
+M-x package-delete [RET] org-plus-contrib and reinstalling with M-x package-install [RET] org-plus-contrib DID fix it
+
