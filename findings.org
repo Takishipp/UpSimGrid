@@ -92,4 +92,20 @@ on s4u :
 "Evaluation of this emacs-lisp code-blockis disabled".
 On Emacs 25.2 (9.0) and using org-plus-contrib:
 M-x package-delete [RET] org-plus-contrib and reinstalling with M-x package-install [RET] org-plus-contrib DID fix it
-
+* Output Halo sst-macro
+xy: nx=0 ny=0 ibnd_x=0 ibnd_y=0 ntile_x=0 ntile_y=0 whalo_x=0 whalo_y=0
+[boubehziz-HP:05537] *** Process received signal ***
+[boubehziz-HP:05537] Signal: Floating point exception (8)
+[boubehziz-HP:05537] Signal code: Integer divide-by-zero (1)
+[boubehziz-HP:05537] Failing at address: 0x563e32e50570
+[boubehziz-HP:05537] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x3ef20)[0x7f2203d12f20]
+[boubehziz-HP:05537] [ 1] /home/boubehziz/Mine/MeteoFrSST/Benchmarks/halo/shm_mgr.x(+0x11570)[0x563e32e50570]
+[boubehziz-HP:05537] [ 2] /home/boubehziz/Mine/MeteoFrSST/Benchmarks/halo/shm_mgr.x(+0x11c58)[0x563e32e50c58]
+[boubehziz-HP:05537] [ 3] /home/boubehziz/Mine/MeteoFrSST/Benchmarks/halo/shm_mgr.x(+0x168ac)[0x563e32e558ac]
+[boubehziz-HP:05537] [ 4] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xe7)[0x7f2203cf5b97]
+[boubehziz-HP:05537] [ 5] /home/boubehziz/Mine/MeteoFrSST/Benchmarks/halo/shm_mgr.x(+0xbf3a)[0x563e32e4af3a]
+[boubehziz-HP:05537] *** End of error message ***
+Floating point exception (core dumped)
+cat: /home/boubehziz/Mine/MeteoFrSST/Benchmarks/halo/00000700/GO_MBLOCK_SHMID: No such file or directory
+need to specify input file with -f flag
+Usage: /home/boubehziz/Mine/MeteoFrSST/Benchmarks/halo/shm_mgr.x shmid | path ncpu

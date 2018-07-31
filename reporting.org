@@ -431,7 +431,8 @@ SST/macro can operate with null buffers, the message buffer is set to null in th
 - Find what has change in SST/macro by MeteoFrance researchers. 
 - Extract all MeteoFrance changes that were applied on sstmacro simulator.
 - Preparing SST/macro and its environment ([[https://github.com/sstsimulator/sst-macro/blob/master/docs/manual/manual.md][SST/macro's tutorial]])
-* Week 3 July
+* Week 4 July
 - Fix my machine.
-- (not yet) Learn how using a libraries in SMPI (look [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/options.html#options_smpi_privatize_libs][link]])
+- Learn how using a libraries in SMPI (look [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/options.html#options_smpi_privatize_libs][link]])
+* Week 1 Aug
 - (not yet) Make a similar study to Meteofrance/Halo paper.
