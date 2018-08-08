@@ -109,3 +109,37 @@ Floating point exception (core dumped)
 cat: /home/boubehziz/Mine/MeteoFrSST/Benchmarks/halo/00000700/GO_MBLOCK_SHMID: No such file or directory
 need to specify input file with -f flag
 Usage: /home/boubehziz/Mine/MeteoFrSST/Benchmarks/halo/shm_mgr.x shmid | path ncpu
+* GnuPlot 
+** Mesures 
+On Lunix OS, one can sur /usr/bin/time to measure the walltime of code as following 
+/usr/bin/time -o time.dat -a -f '%e' PROGRAMME 
+This is for add an input to the file for each lenght. We can do it with the following bash : 
+#+BEGIN_SRC sh :tangle bin/MeteoFrance_getcode.sh
+for size in 'seq 1000 1000 90000'
+do 
+ /usr/bin/time -o time.dat -a -f '$size %e' ./a.out $size
+
+done
+
+#+END_SRC
+
+** Gnuplot 
+In order to use gnuplot, one can enter gnuplot command 
+*** Build and run  
+#+BEGIN_SRC sh 
+> set xlable "Size"
+> set ylabel "Time (sec)"
+> set title "Mesure sur un tri à bulle"
+> plot "./a.dat" title "Inverse" w lp, "./b.dat" title "aleatoire" w lp
+#+END_SRC
+where a.dat and b.dat contain the results.
+On can alsor creat a file plot.gplot that contains the following code.
+#+BEGIN_SRC sh 
+set terminal postscript eps color enhanced 16
+set output "plot.eps"
+
+set xlable "Size"
+set ylable "Time (sec)"
+set title "Mesure du tri"
+plot "a.dat" title "Inverse" w lp, "b.dat" title "Aleatoire" w lp
+#+END_SRC
