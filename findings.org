@@ -92,7 +92,8 @@ on s4u :
 "Evaluation of this emacs-lisp code-blockis disabled".
 On Emacs 25.2 (9.0) and using org-plus-contrib:
 M-x package-delete [RET] org-plus-contrib and reinstalling with M-x package-install [RET] org-plus-contrib DID fix it
-* Output Halo sst-macro
+* MeteoFrance benchmark tests
+** Output Halo sst-macro
 xy: nx=0 ny=0 ibnd_x=0 ibnd_y=0 ntile_x=0 ntile_y=0 whalo_x=0 whalo_y=0
 [boubehziz-HP:05537] *** Process received signal ***
 [boubehziz-HP:05537] Signal: Floating point exception (8)
@@ -109,21 +110,20 @@ Floating point exception (core dumped)
 cat: /home/boubehziz/Mine/MeteoFrSST/Benchmarks/halo/00000700/GO_MBLOCK_SHMID: No such file or directory
 need to specify input file with -f flag
 Usage: /home/boubehziz/Mine/MeteoFrSST/Benchmarks/halo/shm_mgr.x shmid | path ncpu
-* GnuPlot 
-** Mesures 
+** GnuPlot 
+*** Mesures 
 On Lunix OS, one can sur /usr/bin/time to measure the walltime of code as following 
 /usr/bin/time -o time.dat -a -f '%e' PROGRAMME 
 This is for add an input to the file for each lenght. We can do it with the following bash : 
 #+BEGIN_SRC sh :tangle bin/MeteoFrance_getcode.sh
 for size in 'seq 1000 1000 90000'
-do 
+do
  /usr/bin/time -o time.dat -a -f '$size %e' ./a.out $size
 
 done
 
 #+END_SRC
 
-** Gnuplot 
 In order to use gnuplot, one can enter gnuplot command 
 *** Build and run  
 #+BEGIN_SRC sh 
@@ -143,3 +143,18 @@ set ylable "Time (sec)"
 set title "Mesure du tri"
 plot "a.dat" title "Inverse" w lp, "b.dat" title "Aleatoire" w lp
 #+END_SRC
+** Transpose run issue when np >2
+smpirun -n 10 -hostfile ../cluster_hostfile.txt -platform ../cluster_crossbar.xml --cfg=smpi/host-speed:100 ./transpose.exe
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'surf/precision' to '1e-9'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'network/model' to 'SMPI'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/host-speed' to '100'
+Before collective communication: current time is Thu Aug 16 09:17:26 2018
+After bcast config: current time is Thu Aug 16 09:17:26 2018
+xz: nx=28800 nz=256 ibnd_x=1 ibnd_z=0 ntile_x=10 ntile_z=1 whalo_x=0 whalo_z=0
+After bcast partition: current time is Thu Aug 16 09:17:26 2018
+Initialized elapsed time: 0.000000 seconds
+Assertion `(m = max * sizeof(double)) >= 0` failed in mpp.cc line 767: bytes received are too large, please increase number of precesses.
+Segmentation fault.
+Try to enable SMPI variable privatization with --cfg=smpi/privatization:yes.
+./transpose.exe --cfg=smpi/privatization:1 --cfg=surf/precision:1e-9 --cfg=network/model:SMPI --cfg=smpi/host-speed:100 ../cluster_crossbar.xml smpitmp-app4SiFog
+Execution failed with code 139.
