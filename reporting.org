@@ -434,5 +434,12 @@ SST/macro can operate with null buffers, the message buffer is set to null in th
 * Week 4 July
 - Fix my machine.
 - Learn how using a libraries in SMPI (look [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/options.html#options_smpi_privatize_libs][link]])
-* Week 1 Aug
+* Week 1-2 Aug
 - (not yet) Make a similar study to Meteofrance/Halo paper.
+- Test Halo benchmark with sst-macro is failed (see findings file).
+- Test Transpose benchmak with simgrid is failed.
+- Trying to fix Kripke ECP benchmark.
+- Friday morning : out of office.
+* Week 3 Aug
+- Monday afternoon & Tuesday : out of office.
+- Kripke git repository cannot be used instead of zip file. I couldn't compile it without OpenMP.
