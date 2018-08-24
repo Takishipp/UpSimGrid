@@ -443,3 +443,17 @@ SST/macro can operate with null buffers, the message buffer is set to null in th
 * Week 3 Aug
 - Monday afternoon & Tuesday : out of office.
 - Kripke git repository cannot be used instead of zip file. I couldn't compile it without OpenMP.
+** Note 
+SimGrid provides these two functions but they have limitation (SMPI_SHARED_MALLOC will fill up the address space with a large number of processes). So our skeleton programs do not use them, so you have to following our way to run our skeleton program. Arnaud Legrand told me that they also encoutered the limitation of SMPI_SHARED_MALLOC in SimGrid, see Section F. Huge Pages for their way to solve the problem in their paper (https://hal.inria.fr/hal-01654804).
+
+Our skeletons work for both SimGrid and SST/macro. But the makefile and automatic scripts have to be adapted to your computer environments. I suggest you to mimic the auto.sh but manually run it step by step. After you sucessfully run it and familar with it, then you can adapt the script to whatever you want.
+
+First, you need to modify the simgrid source code to add a global variable GO_MBLOCK, pass the ID of the shared memory  (created by shm_mgr.x) as a commandline parameter to SimGird, and attach the shared memory (created by shm_mgr.x) to this global variable. See the following the seond last command for how to pass the ID of the shared memory to Simgrid (--cfg=smpi/shmid:${GO_MBLOCK_SHMID})
+Second,  the following more detailed instructions for running the skeleton program with 200 processes:
+mkdir -p 00000200 # please put the attachement (platform.xml and hostfile) under this directory
+shm_mgr.x 00000200 200 -666  # it will create the shared memory, initialize the shared memory with proper information, and save the ID of the shared memory in 00000200/GO_MBLOCK_SHMID
+GO_MBLOCK_SHMID=`cat 00000200/GO_MBLOCK_SHMID`
+smpirun -np 200 -platform 00000200/platform.xml -hostfile 00000200/hostfile ./halo.exe --cfg=smpi/shmid:${GO_MBLOCK_SHMID} --cfg=smpi/simulate-computation:no --cfg=smpi/host-speed:2500000000 --cfg=network/model:SMPI --cfg=contexts/stack-size:64 --cfg=contexts/guard-size:0
+shm_mgr.x $GO_MBLOCK_SHMID # free the shared memory
+
+Similar way for SST/macro. The SST/macro (provided with our paper) has been modified for the shared memory, so you don't need modified SST/macro if you use our version of SST/macro. But you have to do these for SimGrid.
