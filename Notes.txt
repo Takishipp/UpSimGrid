@@ -1,0 +1,2 @@
+J'ajoute à liste qu'on a fait ce matin, ceci : 
+- Il reste des benchmarks qui utilisent omp à tester.

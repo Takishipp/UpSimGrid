@@ -445,6 +445,8 @@ SST/macro can operate with null buffers, the message buffer is set to null in th
 - Monday afternoon & Tuesday : out of office.
 - Kripke git repository cannot be used instead of zip file. I couldn't compile it without OpenMP.
 - Search how measuring communication time (trace module didn't allowed me to get the values as I wish)
-* Week 1 Sep 
+* Week 1-2 Sep 
 - Restudy the benchmaks that use omp and try to run them according to MPI_THREAD_FUNNELED way.
 - Training day in tuesday. 
+* Notes : 
+- Create a file (Notes.txt) that will contains my remarks/suggestions for forward tasks.
