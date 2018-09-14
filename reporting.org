@@ -429,17 +429,22 @@ SST/macro can operate with null buffers, the message buffer is set to null in th
 - Update the links that point out on github repositories.
 - Specify which package of Hdf5 library is used for MiniGhost and LSMS apps.
 - Find what has change in SST/macro by MeteoFrance researchers. 
+* Week 3-4 July
 - Extract all MeteoFrance changes that were applied on sstmacro simulator.
 - Preparing SST/macro and its environment ([[https://github.com/sstsimulator/sst-macro/blob/master/docs/manual/manual.md][SST/macro's tutorial]])
-* Week 4 July
 - Fix my machine.
-- Learn how using a libraries in SMPI (look [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/options.html#options_smpi_privatize_libs][link]])
+** note
+  Refrence is given by mt : How using a libraries in SMPI (look [[http://simgrid.gforge.inria.fr/simgrid/latest/doc/options.html#options_smpi_privatize_libs][link]])
 * Week 1-2 Aug
 - (not yet) Make a similar study to Meteofrance/Halo paper.
 - Test Halo benchmark with sst-macro is failed (see findings file).
 - Test Transpose benchmak with simgrid is failed.
 - Trying to fix Kripke ECP benchmark.
 - Friday morning : out of office.
-* Week 3 Aug
+* Week 3-4 Aug
 - Monday afternoon & Tuesday : out of office.
 - Kripke git repository cannot be used instead of zip file. I couldn't compile it without OpenMP.
+- Search how measuring communication time (trace module didn't allowed me to get the values as I wish)
+* Week 1 Sep 
+- Restudy the benchmaks that use omp and try to run them according to MPI_THREAD_FUNNELED way.
+- Training day in tuesday. 
